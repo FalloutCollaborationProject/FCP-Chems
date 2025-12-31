@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!--__________ Rad-Away __________-->
+
+    <!-- Rad-Away Drug -->
+
+    <ThingDef ParentName="MakeableDrugBase">
+        <defName>FCP_Radaway</defName>
+        <label>Rad-Away</label>
+        <description>A pre-war intravenous chemical solution that bonds with radiation contamination in the body and flushes it out through the bloodstream. While effective at treating toxic buildup, the process is exhausting and leaves the patient weakened for several hours.\n\nRad-Away is a valuable commodity in the wasteland, where radiation exposure is a constant threat.</description>
+        <descriptionHyperlinks>
+            <HediffDef>FCP_RadawayHigh</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Things/Item/Drug/Penoxycyline</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>900</WorkToMake>
+            <MarketValue>35</MarketValue>
+            <Mass>0.05</Mass>
+        </statBases>
+        <techLevel>Industrial</techLevel>
+        <ingestible>
+            <foodType>Processed, Fluid</foodType>
+            <baseIngestTicks>80</baseIngestTicks>
+            <nurseable>true</nurseable>
+            <drugCategory>Medical</drugCategory>
+            <ingestSound>Ingest_Inject</ingestSound>
+            <ingestHoldOffsetStanding>
+                <northDefault>
+                    <offset>(0.18,0,0)</offset>
+                </northDefault>
+            </ingestHoldOffsetStanding>
+            <ingestCommandString>Take {0}</ingestCommandString>
+            <ingestReportString>Taking {0}.</ingestReportString>
+            <useEatingSpeedStat>false</useEatingSpeedStat>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_RadawayHigh</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <recipeMaker>
+            <researchPrerequisite>DrugProduction</researchPrerequisite>
+            <recipeUsers>
+                <li>DrugLab</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Drug</soundWorking>
+        </recipeMaker>
+        <costList>
+            <Neutroamine>2</Neutroamine>
+            <Chemfuel>1</Chemfuel>
+        </costList>
+        <comps>
+            <li Class="CompProperties_Drug">
+                <listOrder>1010</listOrder>
+                <overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Rad-Away Effect Hediff -->
+
+    <HediffDef>
+        <defName>FCP_RadawayHigh</defName>
+        <label>Rad-Away</label>
+        <description>Rad-Away is actively purging radiation from the bloodstream. While effective, the process is exhausting.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.2,1,0.2)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <!-- Removes toxic buildup -->
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>15000</disappearsAfterTicks> <!-- ~6 hours -->
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_RemoveHediff">
+                <hediff>ToxicBuildup</hediff>
+                <removeOnDaysTicks>2500</removeOnDaysTicks> <!-- Check every ~1 hour -->
+                <removeAmount>0.15</removeAmount> <!-- Removes 0.15 severity per check -->
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.10</offset>
+                    </li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>-0.15</offset>
+                    </li>
+                    <li>
+                        <capacity>BloodFiltration</capacity>
+                        <offset>0.20</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+</Defs>
