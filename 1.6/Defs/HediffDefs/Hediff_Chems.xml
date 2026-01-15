@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!--__________ Stimpaks __________-->
+
+    <!-- Diluted Stimpak - Weakest version -->
+
+    <HediffDef>
+        <defName>FCP_Hediff_Diluted_Stimpak</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(180,220,180)</defaultLabelColor>
+        <label>diluted stimpak</label>
+        <labelNoun>diluted stimpak</labelNoun>
+        <description>A watered-down stimulation pack that provides minor healing over time.</description>
+        <comps>
+            <li Class="StimPacks.Comps.StimPackProp">
+                <HealPermanentInjuries>false</HealPermanentInjuries>
+                <HealMissingBodyParts>false</HealMissingBodyParts>
+                <RemoveHediffWhenDone>True</RemoveHediffWhenDone>
+                <ScaleHealedAmountWithTotalHitPoints>true</ScaleHealedAmountWithTotalHitPoints>
+                <HealedAmount>10</HealedAmount>
+                <TickMinimumBetweenHealing>35</TickMinimumBetweenHealing>
+                <TickMaximumBetweenHealing>45</TickMaximumBetweenHealing>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <!-- Standard Stimpak -->
+
+    <HediffDef>
+        <defName>FCP_Hediff_Stimpak</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(220,220,180)</defaultLabelColor>
+        <label>stimpak</label>
+        <labelNoun>stimpak</labelNoun>
+        <description>A standard stimulation delivery system for healing injuries. The most common medical item in the wasteland.</description>
+        <comps>
+            <li Class="StimPacks.Comps.StimPackProp">
+                <HealPermanentInjuries>false</HealPermanentInjuries>
+                <HealMissingBodyParts>false</HealMissingBodyParts>
+                <RemoveHediffWhenDone>True</RemoveHediffWhenDone>
+                <ScaleHealedAmountWithTotalHitPoints>true</ScaleHealedAmountWithTotalHitPoints>
+                <HealedAmount>25</HealedAmount>
+                <TickMinimumBetweenHealing>22</TickMinimumBetweenHealing>
+                <TickMaximumBetweenHealing>28</TickMaximumBetweenHealing>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <!-- Ultra Stimpak - Enhanced version -->
+
+    <HediffDef>
+        <defName>FCP_Hediff_Ultra_Stimpak</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(220,200,140)</defaultLabelColor>
+        <label>ultra stimpak</label>
+        <labelNoun>ultra stimpak</labelNoun>
+        <description>An enhanced stimulation pack with improved healing properties and faster action.</description>
+        <comps>
+            <li Class="StimPacks.Comps.StimPackProp">
+                <HealPermanentInjuries>false</HealPermanentInjuries>
+                <HealMissingBodyParts>false</HealMissingBodyParts>
+                <RemoveHediffWhenDone>True</RemoveHediffWhenDone>
+                <ScaleHealedAmountWithTotalHitPoints>true</ScaleHealedAmountWithTotalHitPoints>
+                <HealedAmount>40</HealedAmount>
+                <TickMinimumBetweenHealing>18</TickMinimumBetweenHealing>
+                <TickMaximumBetweenHealing>22</TickMaximumBetweenHealing>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <!-- Super Stimpak - Most powerful single-use version -->
+
+    <HediffDef>
+        <defName>FCP_Hediff_Super_Stimpak</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(255,200,100)</defaultLabelColor>
+        <label>super stimpak</label>
+        <labelNoun>super stimpak</labelNoun>
+        <description>A potent military-grade stimulation pack that provides rapid and extensive healing.</description>
+        <comps>
+            <li Class="StimPacks.Comps.StimPackProp">
+                <HealPermanentInjuries>true</HealPermanentInjuries>
+                <HealMissingBodyParts>false</HealMissingBodyParts>
+                <RemoveHediffWhenDone>True</RemoveHediffWhenDone>
+                <ScaleHealedAmountWithTotalHitPoints>true</ScaleHealedAmountWithTotalHitPoints>
+                <HealedAmount>75</HealedAmount>
+                <TickMinimumBetweenHealing>12</TickMinimumBetweenHealing>
+                <TickMaximumBetweenHealing>16</TickMaximumBetweenHealing>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <!-- Auto-Stimpak - Automatic version -->
+
+    <HediffDef>
+        <defName>FCP_Hediff_Auto_Stimpak</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(180,220,255)</defaultLabelColor>
+        <label>auto-stimpak</label>
+        <labelNoun>auto-stimpak</labelNoun>
+        <description>An automated delivery system that dispenses a standard stimpak dose when injuries are detected.</description>
+        <comps>
+            <li Class="StimPacks.Comps.StimPackProp">
+                <HealPermanentInjuries>false</HealPermanentInjuries>
+                <HealMissingBodyParts>false</HealMissingBodyParts>
+                <RemoveHediffWhenDone>True</RemoveHediffWhenDone>
+                <ScaleHealedAmountWithTotalHitPoints>true</ScaleHealedAmountWithTotalHitPoints>
+                <HealedAmount>25</HealedAmount>
+                <TickMinimumBetweenHealing>22</TickMinimumBetweenHealing>
+                <TickMaximumBetweenHealing>28</TickMaximumBetweenHealing>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <!-- Auto-Super Stimpak - Automatic super version -->
+
+    <HediffDef>
+        <defName>FCP_Hediff_Auto_Super_Stimpak</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(255,180,100)</defaultLabelColor>
+        <label>auto-super stimpak</label>
+        <labelNoun>auto-super stimpak</labelNoun>
+        <description>An automated delivery system loaded with super stimpak formula for rapid emergency healing.</description>
+        <comps>
+            <li Class="StimPacks.Comps.StimPackProp">
+                <HealPermanentInjuries>true</HealPermanentInjuries>
+                <HealMissingBodyParts>false</HealMissingBodyParts>
+                <RemoveHediffWhenDone>True</RemoveHediffWhenDone>
+                <ScaleHealedAmountWithTotalHitPoints>true</ScaleHealedAmountWithTotalHitPoints>
+                <HealedAmount>75</HealedAmount>
+                <TickMinimumBetweenHealing>12</TickMinimumBetweenHealing>
+                <TickMaximumBetweenHealing>16</TickMaximumBetweenHealing>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <!--__________ Rad-X __________-->
+
+    <!-- Rad-X Effect Hediff -->
+
+    <HediffDef>
+        <defName>FCP_RadXHigh</defName>
+        <label>Rad-X</label>
+        <description>Rad-X is providing protection against radiation and toxic contamination by altering cellular structure. Side effects include minor disorientation and reduced reflexes.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(1,0.5,0.2)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>30000</disappearsAfterTicks> <!-- ~12.5 hours -->
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.3</severityPerDay> <!-- Gradually reduces itself -->
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.05</offset>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>-0.05</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <ToxicResistance>0.50</ToxicResistance>
+                    <ToxicEnvironmentResistance>0.50</ToxicEnvironmentResistance>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--__________ Rad-Away __________-->
+
+    <!-- Rad-Away Effect Hediff -->
+
+    <HediffDef>
+        <defName>FCP_RadawayHigh</defName>
+        <label>Rad-Away</label>
+        <description>Rad-Away is actively purging radiation from the bloodstream. While effective, the process is exhausting.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.2,1,0.2)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <!-- Removes toxic buildup -->
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>15000</disappearsAfterTicks> <!-- ~6 hours -->
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.6</severityPerDay> <!-- Gradually reduces itself -->
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.10</offset>
+                    </li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>-0.15</offset>
+                    </li>
+                    <li>
+                        <capacity>BloodFiltration</capacity>
+                        <offset>0.20</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--__________ Healing Powder __________-->
+
+    <!-- Healing Powder Effect Hediff -->
+
+    <HediffDef>
+        <defName>FCP_HealingPowderHigh</defName>
+        <label>healing powder</label>
+        <description>Traditional wasteland medicine is providing gradual healing. The mixture of broc flower and xander root promotes natural tissue regeneration.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.7,0.9,0.5)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>7500</disappearsAfterTicks> <!-- ~3 hours -->
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-1.2</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <statOffsets>
+                    <InjuryHealingFactor>0.25</InjuryHealingFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--__________ Med-X __________-->
+
+    <!-- Med-X Effect Hediff -->
+
+    <HediffDef>
+        <defName>FCP_MedXHigh</defName>
+        <label>Med-X</label>
+        <description>Med-X is blocking pain signals and providing damage resistance. The powerful analgesic effect makes injuries less debilitating.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.9,0.7,0.3)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>18000</disappearsAfterTicks> <!-- ~7.5 hours -->
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.5</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <painOffset>-0.25</painOffset>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.05</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <IncomingDamageFactor>-0.15</IncomingDamageFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--__________ Hydra __________-->
+
+    <!-- Hydra Effect Hediff -->
+
+    <HediffDef>
+        <defName>FCP_HydraHigh</defName>
+        <label>Hydra</label>
+        <description>Hydra is rapidly regenerating damaged tissue and healing crippled limbs. The process is intense and causes disorientation.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.3,0.9,0.9)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>2500</disappearsAfterTicks> <!-- ~1 hour -->
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-3.0</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.15</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <InjuryHealingFactor>1.50</InjuryHealingFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--__________ Doctor's Bag __________-->
+
+    <!-- Doctor's Bag Effect Hediff -->
+
+    <HediffDef>
+        <defName>FCP_DoctorsBagHigh</defName>
+        <label>field surgery</label>
+        <description>Comprehensive medical treatment is repairing injuries and crippled limbs. The extensive field surgery provides substantial healing over time.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.2,0.8,0.2)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>10000</disappearsAfterTicks> <!-- ~4 hours -->
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.9</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <statOffsets>
+                    <InjuryHealingFactor>0.80</InjuryHealingFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--__________ Blood Pack __________-->
+
+    <!-- Blood Pack Effect Hediff -->
+
+    <HediffDef>
+        <defName>FCP_BloodPackHigh</defName>
+        <label>blood transfusion</label>
+        <description>Fresh blood is restoring blood volume and promoting healing. The transfusion helps stabilize the patient.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.9,0.2,0.2)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>5000</disappearsAfterTicks> <!-- ~2 hours -->
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-1.8</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>BloodPumping</capacity>
+                        <offset>0.10</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <InjuryHealingFactor>0.35</InjuryHealingFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+</Defs>
