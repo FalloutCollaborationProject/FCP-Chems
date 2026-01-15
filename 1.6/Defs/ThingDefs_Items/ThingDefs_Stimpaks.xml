@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!--__________ Stimpaks __________-->
+
+    <!-- Diluted Stimpak -->
+
+    <ThingDef ParentName="MakeableDrugBase">
+        <defName>FCP_Diluted_Stimpak</defName>
+        <label>diluted stimpak</label>
+        <description>A watered-down stimulation delivery system that provides minor healing over time. Common among wasteland scavengers due to its lower cost and availability.</description>
+        <descriptionHyperlinks>
+            <HediffDef>FCP_Hediff_Diluted_Stimpak</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Chems/Stimpaks/Diluted_Stimpak/FCP_Diluted_Stimpak</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>600</WorkToMake>
+            <MarketValue>40</MarketValue>
+            <Mass>0.05</Mass>
+        </statBases>
+        <techLevel>Industrial</techLevel>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <baseIngestTicks>60</baseIngestTicks>
+            <nurseable>true</nurseable>
+            <drugCategory>Medical</drugCategory>
+            <ingestSound>Ingest_Inject</ingestSound>
+            <ingestHoldOffsetStanding>
+                <northDefault>
+                    <offset>(0.18,0,0)</offset>
+                </northDefault>
+            </ingestHoldOffsetStanding>
+            <ingestCommandString>Use {0}</ingestCommandString>
+            <ingestReportString>Using {0}.</ingestReportString>
+            <useEatingSpeedStat>false</useEatingSpeedStat>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Hediff_Diluted_Stimpak</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <recipeMaker>
+            <researchPrerequisite>FCP_Research_Medicinal_Drugs</researchPrerequisite>
+            <recipeUsers>
+                <li>FCP_Production_Chemistry_Workbench</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Drug</soundWorking>
+        </recipeMaker>
+        <costList>
+            <MedicineHerbal>1</MedicineHerbal>
+            <Neutroamine>1</Neutroamine>
+        </costList>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Common</rarity>
+            </li>
+            <li Class="CompProperties_Drug">
+                <listOrder>1000</listOrder>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Standard Stimpak -->
+
+    <ThingDef ParentName="MakeableDrugBase">
+        <defName>FCP_Stimpak</defName>
+        <label>stimpak</label>
+        <description>A standard stimulation delivery system for healing injuries. The most common medical item in the wasteland, stimpaks use a combination of healing agents and bio-regenerative compounds to rapidly mend wounds.</description>
+        <descriptionHyperlinks>
+            <HediffDef>FCP_Hediff_Stimpak</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Chems/Stimpaks/Stimpak/FCP_Stimpak</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>900</WorkToMake>
+            <MarketValue>85</MarketValue>
+            <Mass>0.05</Mass>
+        </statBases>
+        <techLevel>Industrial</techLevel>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <baseIngestTicks>60</baseIngestTicks>
+            <nurseable>true</nurseable>
+            <drugCategory>Medical</drugCategory>
+            <ingestSound>Ingest_Inject</ingestSound>
+            <ingestHoldOffsetStanding>
+                <northDefault>
+                    <offset>(0.18,0,0)</offset>
+                </northDefault>
+            </ingestHoldOffsetStanding>
+            <ingestCommandString>Use {0}</ingestCommandString>
+            <ingestReportString>Using {0}.</ingestReportString>
+            <useEatingSpeedStat>false</useEatingSpeedStat>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Hediff_Stimpak</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <recipeMaker>
+            <researchPrerequisite>FCP_Research_Medicinal_Drugs</researchPrerequisite>
+            <recipeUsers>
+                <li>FCP_Production_Chemistry_Workbench</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Drug</soundWorking>
+        </recipeMaker>
+        <costList>
+            <MedicineIndustrial>1</MedicineIndustrial>
+            <Neutroamine>2</Neutroamine>
+        </costList>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Common</rarity>
+            </li>
+            <li Class="CompProperties_Drug">
+                <listOrder>1001</listOrder>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Ultra Stimpak -->
+
+    <ThingDef ParentName="MakeableDrugBase">
+        <defName>FCP_Ultra_Stimpak</defName>
+        <label>ultra stimpak</label>
+        <description>An enhanced stimulation pack with improved healing properties and faster action. These improved stimpaks use a more concentrated formula with additional bio-regenerative compounds.</description>
+        <descriptionHyperlinks>
+            <HediffDef>FCP_Hediff_Ultra_Stimpak</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Chems/Stimpaks/Ultra_Stimpak/FCP_Ultra_Stimpak</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>1200</WorkToMake>
+            <MarketValue>140</MarketValue>
+            <Mass>0.05</Mass>
+        </statBases>
+        <techLevel>Industrial</techLevel>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <baseIngestTicks>50</baseIngestTicks>
+            <nurseable>true</nurseable>
+            <drugCategory>Medical</drugCategory>
+            <ingestSound>Ingest_Inject</ingestSound>
+            <ingestHoldOffsetStanding>
+                <northDefault>
+                    <offset>(0.18,0,0)</offset>
+                </northDefault>
+            </ingestHoldOffsetStanding>
+            <ingestCommandString>Use {0}</ingestCommandString>
+            <ingestReportString>Using {0}.</ingestReportString>
+            <useEatingSpeedStat>false</useEatingSpeedStat>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Hediff_Ultra_Stimpak</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <recipeMaker>
+            <researchPrerequisite>FCP_Research_Medicinal_Drugs</researchPrerequisite>
+            <recipeUsers>
+                <li>FCP_Production_Chemistry_Workbench</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Drug</soundWorking>
+        </recipeMaker>
+        <costList>
+            <MedicineIndustrial>1</MedicineIndustrial>
+            <Neutroamine>3</Neutroamine>
+            <ComponentIndustrial>1</ComponentIndustrial>
+        </costList>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Rare</rarity>
+            </li>
+            <li Class="CompProperties_Drug">
+                <listOrder>1002</listOrder>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Super Stimpak -->
+
+    <ThingDef ParentName="MakeableDrugBase">
+        <defName>FCP_Super_Stimpak</defName>
+        <label>super stimpak</label>
+        <description>A potent military-grade stimulation pack that provides rapid and extensive healing. Super stimpaks use a highly concentrated formula with advanced bio-regenerative compounds, making them extremely valuable and rare.</description>
+        <descriptionHyperlinks>
+            <HediffDef>FCP_Hediff_Super_Stimpak</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Chems/Stimpaks/Super_Stimpak/FCP_Super_Stimpak</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>1800</WorkToMake>
+            <MarketValue>280</MarketValue>
+            <Mass>0.05</Mass>
+        </statBases>
+        <techLevel>Industrial</techLevel>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <baseIngestTicks>40</baseIngestTicks>
+            <nurseable>true</nurseable>
+            <drugCategory>Medical</drugCategory>
+            <ingestSound>Ingest_Inject</ingestSound>
+            <ingestHoldOffsetStanding>
+                <northDefault>
+                    <offset>(0.18,0,0)</offset>
+                </northDefault>
+            </ingestHoldOffsetStanding>
+            <ingestCommandString>Use {0}</ingestCommandString>
+            <ingestReportString>Using {0}.</ingestReportString>
+            <useEatingSpeedStat>false</useEatingSpeedStat>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Hediff_Super_Stimpak</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <recipeMaker>
+            <researchPrerequisite>FCP_Research_Medicinal_Drugs</researchPrerequisite>
+            <recipeUsers>
+                <li>FCP_Production_Chemistry_Workbench</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Drug</soundWorking>
+        </recipeMaker>
+        <costList>
+            <MedicineUltratech>1</MedicineUltratech>
+            <Neutroamine>4</Neutroamine>
+            <ComponentIndustrial>2</ComponentIndustrial>
+        </costList>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Rare</rarity>
+            </li>
+            <li Class="CompProperties_Drug">
+                <listOrder>1003</listOrder>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Auto-Stimpak -->
+
+    <ThingDef ParentName="MakeableDrugBase">
+        <defName>FCP_Auto_Stimpak</defName>
+        <label>auto-stimpak</label>
+        <description>An automated delivery system that dispenses a standard stimpak dose when injuries are detected. The auto-injector mechanism eliminates the need for manual application, making it ideal for solo travelers.</description>
+        <descriptionHyperlinks>
+            <HediffDef>FCP_Hediff_Auto_Stimpak</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Chems/Stimpaks/Auto_Stimpak/FCP_Auto_Stimpak</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>1500</WorkToMake>
+            <MarketValue>160</MarketValue>
+            <Mass>0.08</Mass>
+        </statBases>
+        <techLevel>Industrial</techLevel>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <baseIngestTicks>30</baseIngestTicks>
+            <nurseable>true</nurseable>
+            <drugCategory>Medical</drugCategory>
+            <ingestSound>Ingest_Inject</ingestSound>
+            <ingestHoldOffsetStanding>
+                <northDefault>
+                    <offset>(0.18,0,0)</offset>
+                </northDefault>
+            </ingestHoldOffsetStanding>
+            <ingestCommandString>Use {0}</ingestCommandString>
+            <ingestReportString>Using {0}.</ingestReportString>
+            <useEatingSpeedStat>false</useEatingSpeedStat>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Hediff_Auto_Stimpak</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <recipeMaker>
+            <researchPrerequisite>FCP_Research_Medicinal_Drugs</researchPrerequisite>
+            <recipeUsers>
+                <li>FCP_Production_Chemistry_Workbench</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Drug</soundWorking>
+        </recipeMaker>
+        <costList>
+            <MedicineIndustrial>1</MedicineIndustrial>
+            <Neutroamine>2</Neutroamine>
+            <ComponentIndustrial>1</ComponentIndustrial>
+            <Steel>5</Steel>
+        </costList>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Rare</rarity>
+            </li>
+            <li Class="CompProperties_Drug">
+                <listOrder>1004</listOrder>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Auto-Super Stimpak -->
+
+    <ThingDef ParentName="MakeableDrugBase">
+        <defName>FCP_Auto_Super_Stimpak</defName>
+        <label>auto-super stimpak</label>
+        <description>An automated delivery system loaded with super stimpak formula for rapid emergency healing. This advanced injector combines military-grade healing compounds with automated delivery technology, making it one of the most valuable medical items in the wasteland.</description>
+        <descriptionHyperlinks>
+            <HediffDef>FCP_Hediff_Auto_Super_Stimpak</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Chems/Stimpaks/Auto_Super_Stimpak/FCP_Auto_Super_Stimpak</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>2400</WorkToMake>
+            <MarketValue>420</MarketValue>
+            <Mass>0.08</Mass>
+        </statBases>
+        <techLevel>Industrial</techLevel>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <baseIngestTicks>30</baseIngestTicks>
+            <nurseable>true</nurseable>
+            <drugCategory>Medical</drugCategory>
+            <ingestSound>Ingest_Inject</ingestSound>
+            <ingestHoldOffsetStanding>
+                <northDefault>
+                    <offset>(0.18,0,0)</offset>
+                </northDefault>
+            </ingestHoldOffsetStanding>
+            <ingestCommandString>Use {0}</ingestCommandString>
+            <ingestReportString>Using {0}.</ingestReportString>
+            <useEatingSpeedStat>false</useEatingSpeedStat>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Hediff_Auto_Super_Stimpak</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <recipeMaker>
+            <researchPrerequisite>FCP_Research_Medicinal_Drugs</researchPrerequisite>
+            <recipeUsers>
+                <li>FCP_Production_Chemistry_Workbench</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Drug</soundWorking>
+        </recipeMaker>
+        <costList>
+            <MedicineUltratech>1</MedicineUltratech>
+            <Neutroamine>4</Neutroamine>
+            <ComponentIndustrial>3</ComponentIndustrial>
+            <Steel>5</Steel>
+        </costList>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Rare</rarity>
+            </li>
+            <li Class="CompProperties_Drug">
+                <listOrder>1005</listOrder>
+            </li>
+        </comps>
+    </ThingDef>
+
+</Defs>

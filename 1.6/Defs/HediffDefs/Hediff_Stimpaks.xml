@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Defs>
+
+    <!--__________ Stimpaks __________-->
+
+    <!-- Diluted Stimpak - Weakest version -->
+
+    <HediffDef>
+        <defName>FCP_Hediff_Diluted_Stimpak</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(180,220,180)</defaultLabelColor>
+        <label>diluted stimpak</label>
+        <labelNoun>diluted stimpak</labelNoun>
+        <description>A watered-down stimulation pack that provides minor healing over time.</description>
+        <comps>
+            <li Class="StimPacks.Comps.StimPackProp">
+                <HealPermanentInjuries>false</HealPermanentInjuries>
+                <HealMissingBodyParts>false</HealMissingBodyParts>
+                <RemoveHediffWhenDone>True</RemoveHediffWhenDone>
+                <ScaleHealedAmountWithTotalHitPoints>true</ScaleHealedAmountWithTotalHitPoints>
+                <HealedAmount>10</HealedAmount>
+                <TickMinimumBetweenHealing>35</TickMinimumBetweenHealing>
+                <TickMaximumBetweenHealing>45</TickMaximumBetweenHealing>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <!-- Standard Stimpak -->
+
+    <HediffDef>
+        <defName>FCP_Hediff_Stimpak</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(220,220,180)</defaultLabelColor>
+        <label>stimpak</label>
+        <labelNoun>stimpak</labelNoun>
+        <description>A standard stimulation delivery system for healing injuries. The most common medical item in the wasteland.</description>
+        <comps>
+            <li Class="StimPacks.Comps.StimPackProp">
+                <HealPermanentInjuries>false</HealPermanentInjuries>
+                <HealMissingBodyParts>false</HealMissingBodyParts>
+                <RemoveHediffWhenDone>True</RemoveHediffWhenDone>
+                <ScaleHealedAmountWithTotalHitPoints>true</ScaleHealedAmountWithTotalHitPoints>
+                <HealedAmount>25</HealedAmount>
+                <TickMinimumBetweenHealing>22</TickMinimumBetweenHealing>
+                <TickMaximumBetweenHealing>28</TickMaximumBetweenHealing>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <!-- Ultra Stimpak - Enhanced version -->
+
+    <HediffDef>
+        <defName>FCP_Hediff_Ultra_Stimpak</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(220,200,140)</defaultLabelColor>
+        <label>ultra stimpak</label>
+        <labelNoun>ultra stimpak</labelNoun>
+        <description>An enhanced stimulation pack with improved healing properties and faster action.</description>
+        <comps>
+            <li Class="StimPacks.Comps.StimPackProp">
+                <HealPermanentInjuries>false</HealPermanentInjuries>
+                <HealMissingBodyParts>false</HealMissingBodyParts>
+                <RemoveHediffWhenDone>True</RemoveHediffWhenDone>
+                <ScaleHealedAmountWithTotalHitPoints>true</ScaleHealedAmountWithTotalHitPoints>
+                <HealedAmount>40</HealedAmount>
+                <TickMinimumBetweenHealing>18</TickMinimumBetweenHealing>
+                <TickMaximumBetweenHealing>22</TickMaximumBetweenHealing>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <!-- Super Stimpak - Most powerful single-use version -->
+
+    <HediffDef>
+        <defName>FCP_Hediff_Super_Stimpak</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(255,200,100)</defaultLabelColor>
+        <label>super stimpak</label>
+        <labelNoun>super stimpak</labelNoun>
+        <description>A potent military-grade stimulation pack that provides rapid and extensive healing.</description>
+        <comps>
+            <li Class="StimPacks.Comps.StimPackProp">
+                <HealPermanentInjuries>true</HealPermanentInjuries>
+                <HealMissingBodyParts>false</HealMissingBodyParts>
+                <RemoveHediffWhenDone>True</RemoveHediffWhenDone>
+                <ScaleHealedAmountWithTotalHitPoints>true</ScaleHealedAmountWithTotalHitPoints>
+                <HealedAmount>75</HealedAmount>
+                <TickMinimumBetweenHealing>12</TickMinimumBetweenHealing>
+                <TickMaximumBetweenHealing>16</TickMaximumBetweenHealing>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <!-- Auto-Stimpak - Automatic version -->
+
+    <HediffDef>
+        <defName>FCP_Hediff_Auto_Stimpak</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(180,220,255)</defaultLabelColor>
+        <label>auto-stimpak</label>
+        <labelNoun>auto-stimpak</labelNoun>
+        <description>An automated delivery system that dispenses a standard stimpak dose when injuries are detected.</description>
+        <comps>
+            <li Class="StimPacks.Comps.StimPackProp">
+                <HealPermanentInjuries>false</HealPermanentInjuries>
+                <HealMissingBodyParts>false</HealMissingBodyParts>
+                <RemoveHediffWhenDone>True</RemoveHediffWhenDone>
+                <ScaleHealedAmountWithTotalHitPoints>true</ScaleHealedAmountWithTotalHitPoints>
+                <HealedAmount>25</HealedAmount>
+                <TickMinimumBetweenHealing>22</TickMinimumBetweenHealing>
+                <TickMaximumBetweenHealing>28</TickMaximumBetweenHealing>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <!-- Auto-Super Stimpak - Automatic super version -->
+
+    <HediffDef>
+        <defName>FCP_Hediff_Auto_Super_Stimpak</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(255,180,100)</defaultLabelColor>
+        <label>auto-super stimpak</label>
+        <labelNoun>auto-super stimpak</labelNoun>
+        <description>An automated delivery system loaded with super stimpak formula for rapid emergency healing.</description>
+        <comps>
+            <li Class="StimPacks.Comps.StimPackProp">
+                <HealPermanentInjuries>true</HealPermanentInjuries>
+                <HealMissingBodyParts>false</HealMissingBodyParts>
+                <RemoveHediffWhenDone>True</RemoveHediffWhenDone>
+                <ScaleHealedAmountWithTotalHitPoints>true</ScaleHealedAmountWithTotalHitPoints>
+                <HealedAmount>75</HealedAmount>
+                <TickMinimumBetweenHealing>12</TickMinimumBetweenHealing>
+                <TickMaximumBetweenHealing>16</TickMaximumBetweenHealing>
+            </li>
+        </comps>
+    </HediffDef>
+
+</Defs>

@@ -13,7 +13,7 @@
             <HediffDef>FCP_RadawayHigh</HediffDef>
         </descriptionHyperlinks>
         <graphicData>
-            <texPath>Things/Item/Drug/Penoxycyline</texPath>
+            <texPath>Chems/Rad_X/FCP_Rad_X</texPath>
             <graphicClass>Graphic_Single</graphicClass>
         </graphicData>
         <rotatable>false</rotatable>
@@ -80,10 +80,8 @@
                 <disappearsAfterTicks>15000</disappearsAfterTicks> <!-- ~6 hours -->
                 <showRemainingTime>true</showRemainingTime>
             </li>
-            <li Class="HediffCompProperties_RemoveHediff">
-                <hediff>ToxicBuildup</hediff>
-                <removeOnDaysTicks>2500</removeOnDaysTicks> <!-- Check every ~1 hour -->
-                <removeAmount>0.15</removeAmount> <!-- Removes 0.15 severity per check -->
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.6</severityPerDay> <!-- Gradually reduces itself -->
             </li>
         </comps>
         <stages>
