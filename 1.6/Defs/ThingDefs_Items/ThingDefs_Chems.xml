@@ -6,7 +6,7 @@
     <!-- Diluted Stimpak -->
 
     <ThingDef ParentName="MakeableDrugBase">
-        <defName>FCP_Diluted_Stimpak</defName>
+        <defName>FCP_Chem_Diluted_Stimpak</defName>
         <label>diluted stimpak</label>
         <description>A watered-down stimulation delivery system that provides minor healing over time. Common among wasteland scavengers due to its lower cost and availability.</description>
         <descriptionHyperlinks>
@@ -68,7 +68,7 @@
     <!-- Standard Stimpak -->
 
     <ThingDef ParentName="MakeableDrugBase">
-        <defName>FCP_Stimpak</defName>
+        <defName>FCP_Chem_Stimpak</defName>
         <label>stimpak</label>
         <description>A standard stimulation delivery system for healing injuries. The most common medical item in the wasteland, stimpaks use a combination of healing agents and bio-regenerative compounds to rapidly mend wounds.</description>
         <descriptionHyperlinks>
@@ -130,7 +130,7 @@
     <!-- Ultra Stimpak -->
 
     <ThingDef ParentName="MakeableDrugBase">
-        <defName>FCP_Ultra_Stimpak</defName>
+        <defName>FCP_Chem_Ultra_Stimpak</defName>
         <label>ultra stimpak</label>
         <description>An enhanced stimulation pack with improved healing properties and faster action. These improved stimpaks use a more concentrated formula with additional bio-regenerative compounds.</description>
         <descriptionHyperlinks>
@@ -177,8 +177,7 @@
         </recipeMaker>
         <costList>
             <MedicineIndustrial>1</MedicineIndustrial>
-            <Neutroamine>3</Neutroamine>
-            <ComponentIndustrial>1</ComponentIndustrial>
+            <Neutroamine>4</Neutroamine>
         </costList>
         <comps>
             <li Class="FCP.Core.CompProperties_LabelColored">
@@ -193,7 +192,7 @@
     <!-- Super Stimpak -->
 
     <ThingDef ParentName="MakeableDrugBase">
-        <defName>FCP_Super_Stimpak</defName>
+        <defName>FCP_Chem_Super_Stimpak</defName>
         <label>super stimpak</label>
         <description>A potent military-grade stimulation pack that provides rapid and extensive healing. Super stimpaks use a highly concentrated formula with advanced bio-regenerative compounds, making them extremely valuable and rare.</description>
         <descriptionHyperlinks>
@@ -240,8 +239,7 @@
         </recipeMaker>
         <costList>
             <MedicineUltratech>1</MedicineUltratech>
-            <Neutroamine>4</Neutroamine>
-            <ComponentIndustrial>2</ComponentIndustrial>
+            <Neutroamine>6</Neutroamine>
         </costList>
         <comps>
             <li Class="FCP.Core.CompProperties_LabelColored">
@@ -256,7 +254,7 @@
     <!-- Auto-Stimpak -->
 
     <ThingDef ParentName="MakeableDrugBase">
-        <defName>FCP_Auto_Stimpak</defName>
+        <defName>FCP_Chem_Auto_Stimpak</defName>
         <label>auto-stimpak</label>
         <description>An automated delivery system that dispenses a standard stimpak dose when injuries are detected. The auto-injector mechanism eliminates the need for manual application, making it ideal for solo travelers.</description>
         <descriptionHyperlinks>
@@ -302,10 +300,8 @@
             <soundWorking>Recipe_Drug</soundWorking>
         </recipeMaker>
         <costList>
-            <MedicineIndustrial>1</MedicineIndustrial>
-            <Neutroamine>2</Neutroamine>
-            <ComponentIndustrial>1</ComponentIndustrial>
-            <Steel>5</Steel>
+            <MedicineIndustrial>2</MedicineIndustrial>
+            <Neutroamine>3</Neutroamine>
         </costList>
         <comps>
             <li Class="FCP.Core.CompProperties_LabelColored">
@@ -320,7 +316,7 @@
     <!-- Auto-Super Stimpak -->
 
     <ThingDef ParentName="MakeableDrugBase">
-        <defName>FCP_Auto_Super_Stimpak</defName>
+        <defName>FCP_Chem_Auto_Super_Stimpak</defName>
         <label>auto-super stimpak</label>
         <description>An automated delivery system loaded with super stimpak formula for rapid emergency healing. This advanced injector combines military-grade healing compounds with automated delivery technology, making it one of the most valuable medical items in the wasteland.</description>
         <descriptionHyperlinks>
@@ -366,10 +362,8 @@
             <soundWorking>Recipe_Drug</soundWorking>
         </recipeMaker>
         <costList>
-            <MedicineUltratech>1</MedicineUltratech>
-            <Neutroamine>4</Neutroamine>
-            <ComponentIndustrial>3</ComponentIndustrial>
-            <Steel>5</Steel>
+            <MedicineUltratech>2</MedicineUltratech>
+            <Neutroamine>6</Neutroamine>
         </costList>
         <comps>
             <li Class="FCP.Core.CompProperties_LabelColored">
@@ -386,11 +380,11 @@
     <!-- Rad-X Drug -->
 
     <ThingDef ParentName="MakeableDrugBase">
-        <defName>FCP_RadX</defName>
+        <defName>FCP_Chem_RadX</defName>
         <label>Rad-X</label>
         <description>A pre-war anti-radiation chemical that significantly increases the body's resistance to toxic and radioactive contamination. Rad-X works by temporarily altering cellular structure to resist radiation absorption, though this process causes minor disorientation and reduced reflexes.\n\nUnlike Rad-Away, which removes existing contamination, Rad-X is taken preventatively before exposure to hazardous environments.</description>
         <descriptionHyperlinks>
-            <HediffDef>FCP_RadXHigh</HediffDef>
+            <HediffDef>FCP_Hediff_RadXHigh</HediffDef>
         </descriptionHyperlinks>
         <graphicData>
             <texPath>Chems/Rad_X/FCP_Rad_X</texPath>
@@ -419,7 +413,7 @@
             <useEatingSpeedStat>false</useEatingSpeedStat>
             <outcomeDoers>
                 <li Class="IngestionOutcomeDoer_GiveHediff">
-                    <hediffDef>FCP_RadXHigh</hediffDef>
+                    <hediffDef>FCP_Hediff_RadXHigh</hediffDef>
                     <severity>1.0</severity>
                 </li>
             </outcomeDoers>
@@ -433,7 +427,6 @@
         </recipeMaker>
         <costList>
             <Neutroamine>2</Neutroamine>
-            <Chemfuel>1</Chemfuel>
         </costList>
         <comps>
             <li Class="FCP.Core.CompProperties_LabelColored">
@@ -451,11 +444,11 @@
     <!-- Rad-Away Drug -->
 
     <ThingDef ParentName="MakeableDrugBase">
-        <defName>FCP_Radaway</defName>
+        <defName>FCP_Chem_Radaway</defName>
         <label>Rad-Away</label>
         <description>A pre-war intravenous chemical solution that bonds with radiation contamination in the body and flushes it out through the bloodstream. While effective at treating toxic buildup, the process is exhausting and leaves the patient weakened for several hours.\n\nRad-Away is a valuable commodity in the wasteland, where radiation exposure is a constant threat.</description>
         <descriptionHyperlinks>
-            <HediffDef>FCP_RadawayHigh</HediffDef>
+            <HediffDef>FCP_Hediff_RadawayHigh</HediffDef>
         </descriptionHyperlinks>
         <graphicData>
             <texPath>Chems/Rad_X/FCP_Rad_X</texPath>
@@ -484,7 +477,7 @@
             <useEatingSpeedStat>false</useEatingSpeedStat>
             <outcomeDoers>
                 <li Class="IngestionOutcomeDoer_GiveHediff">
-                    <hediffDef>FCP_RadawayHigh</hediffDef>
+                    <hediffDef>FCP_Hediff_RadawayHigh</hediffDef>
                     <severity>1.0</severity>
                 </li>
             </outcomeDoers>
@@ -498,7 +491,6 @@
         </recipeMaker>
         <costList>
             <Neutroamine>2</Neutroamine>
-            <Chemfuel>1</Chemfuel>
         </costList>
         <comps>
             <li Class="FCP.Core.CompProperties_LabelColored">
@@ -515,12 +507,12 @@
 
     <!-- Healing Powder Drug -->
 
-    <ThingDef ParentName="MakeableDrugBase">
-        <defName>FCP_Healing_Powder</defName>
+    <ThingDef ParentName="MakeableDrugBase" MayRequire="Rick.FCP.Plants">
+        <defName>FCP_Chem_Healing_Powder</defName>
         <label>healing powder</label>
         <description>A traditional wasteland medicine made from ground broc flower and xander root. While less effective than modern stimpaks, healing powder is cheaper to produce and has been used by tribal healers for generations. The mixture provides gradual healing over time.</description>
         <descriptionHyperlinks>
-            <HediffDef>FCP_HealingPowderHigh</HediffDef>
+            <HediffDef>FCP_Hediff_HealingPowderHigh</HediffDef>
         </descriptionHyperlinks>
         <graphicData>
             <texPath>Chems/Rad_X/FCP_Rad_X</texPath>
@@ -549,7 +541,7 @@
             <useEatingSpeedStat>false</useEatingSpeedStat>
             <outcomeDoers>
                 <li Class="IngestionOutcomeDoer_GiveHediff">
-                    <hediffDef>FCP_HealingPowderHigh</hediffDef>
+                    <hediffDef>FCP_Hediff_HealingPowderHigh</hediffDef>
                     <severity>1.0</severity>
                 </li>
             </outcomeDoers>
@@ -581,11 +573,11 @@
     <!-- Med-X Drug -->
 
     <ThingDef ParentName="MakeableDrugBase">
-        <defName>FCP_MedX</defName>
+        <defName>FCP_Chem_MedX</defName>
         <label>Med-X</label>
         <description>A pre-war pain suppression medication. Med-X works by blocking pain receptors and reducing incoming damage through enhanced pain tolerance. The drug is highly effective but carries significant risk of addiction.\n\nOriginally marketed as a general anesthetic, Med-X has become a valuable combat drug in the wasteland.</description>
         <descriptionHyperlinks>
-            <HediffDef>FCP_MedXHigh</HediffDef>
+            <HediffDef>FCP_Hediff_MedXHigh</HediffDef>
         </descriptionHyperlinks>
         <graphicData>
             <texPath>Chems/Rad_X/FCP_Rad_X</texPath>
@@ -614,7 +606,7 @@
             <useEatingSpeedStat>false</useEatingSpeedStat>
             <outcomeDoers>
                 <li Class="IngestionOutcomeDoer_GiveHediff">
-                    <hediffDef>FCP_MedXHigh</hediffDef>
+                    <hediffDef>FCP_Hediff_MedXHigh</hediffDef>
                     <severity>1.0</severity>
                 </li>
             </outcomeDoers>
@@ -628,15 +620,12 @@
         </recipeMaker>
         <costList>
             <Neutroamine>2</Neutroamine>
-            <Chemfuel>1</Chemfuel>
         </costList>
         <comps>
             <li Class="FCP.Core.CompProperties_LabelColored">
                 <rarity>Common</rarity>
             </li>
             <li Class="CompProperties_Drug">
-                <chemical>FCP_MedX</chemical>
-                <addictiveness>0.05</addictiveness>
                 <listOrder>1030</listOrder>
                 <overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
             </li>
@@ -648,11 +637,11 @@
     <!-- Hydra Drug -->
 
     <ThingDef ParentName="MakeableDrugBase">
-        <defName>FCP_Hydra</defName>
+        <defName>FCP_Chem_Hydra</defName>
         <label>Hydra</label>
         <description>An experimental pre-war drug designed to rapidly heal crippled limbs. Hydra uses advanced regenerative compounds to repair damaged tissue and bone, though the process is painful and can cause temporary disorientation.\n\nPopular among wasteland combatants for its ability to get wounded soldiers back into the fight quickly.</description>
         <descriptionHyperlinks>
-            <HediffDef>FCP_HydraHigh</HediffDef>
+            <HediffDef>FCP_Hediff_HydraHigh</HediffDef>
         </descriptionHyperlinks>
         <graphicData>
             <texPath>Chems/Rad_X/FCP_Rad_X</texPath>
@@ -681,7 +670,7 @@
             <useEatingSpeedStat>false</useEatingSpeedStat>
             <outcomeDoers>
                 <li Class="IngestionOutcomeDoer_GiveHediff">
-                    <hediffDef>FCP_HydraHigh</hediffDef>
+                    <hediffDef>FCP_Hediff_HydraHigh</hediffDef>
                     <severity>1.0</severity>
                 </li>
             </outcomeDoers>
@@ -695,8 +684,7 @@
         </recipeMaker>
         <costList>
             <MedicineIndustrial>1</MedicineIndustrial>
-            <Neutroamine>3</Neutroamine>
-            <Chemfuel>2</Chemfuel>
+            <Neutroamine>4</Neutroamine>
         </costList>
         <comps>
             <li Class="FCP.Core.CompProperties_LabelColored">
@@ -713,11 +701,11 @@
     <!-- Doctor's Bag -->
 
     <ThingDef ParentName="MakeableDrugBase">
-        <defName>FCP_Doctors_Bag</defName>
+        <defName>FCP_Chem_Doctors_Bag</defName>
         <label>doctor's bag</label>
         <description>A comprehensive medical kit containing surgical tools, antiseptics, splints, and pharmaceutical supplies. Doctor's bags allow field treatment of serious injuries and crippled limbs, though proper application requires medical knowledge and time.\n\nAn essential piece of equipment for any serious wasteland medic.</description>
         <descriptionHyperlinks>
-            <HediffDef>FCP_DoctorsBagHigh</HediffDef>
+            <HediffDef>FCP_Hediff_DoctorsBagHigh</HediffDef>
         </descriptionHyperlinks>
         <graphicData>
             <texPath>Chems/Rad_X/FCP_Rad_X</texPath>
@@ -726,7 +714,7 @@
         <rotatable>false</rotatable>
         <statBases>
             <WorkToMake>2400</WorkToMake>
-            <MarketValue>110</MarketValue>
+            <MarketValue>500</MarketValue>
             <Mass>0.50</Mass>
         </statBases>
         <techLevel>Industrial</techLevel>
@@ -746,7 +734,7 @@
             <useEatingSpeedStat>false</useEatingSpeedStat>
             <outcomeDoers>
                 <li Class="IngestionOutcomeDoer_GiveHediff">
-                    <hediffDef>FCP_DoctorsBagHigh</hediffDef>
+                    <hediffDef>FCP_Hediff_DoctorsBagHigh</hediffDef>
                     <severity>1.0</severity>
                 </li>
             </outcomeDoers>
@@ -760,9 +748,8 @@
         </recipeMaker>
         <costList>
             <MedicineIndustrial>2</MedicineIndustrial>
-            <Neutroamine>2</Neutroamine>
+            <Neutroamine>4</Neutroamine>
             <Cloth>10</Cloth>
-            <Steel>5</Steel>
         </costList>
         <comps>
             <li Class="FCP.Core.CompProperties_LabelColored">
@@ -778,12 +765,12 @@
 
     <!-- Blood Pack -->
 
-    <ThingDef ParentName="MakeableDrugBase">
-        <defName>FCP_Blood_Pack</defName>
+    <ThingDef ParentName="DrugBase">
+        <defName>FCP_Chem_Blood_Pack</defName>
         <label>blood pack</label>
         <description>A sterile bag of preserved blood suitable for emergency transfusions. Blood packs provide immediate restoration of blood volume and help stabilize critically wounded patients. While not as advanced as modern medical technology, these pre-war medical supplies remain valuable in the wasteland.\n\nBlood packs are universal donors and work with all blood types.</description>
         <descriptionHyperlinks>
-            <HediffDef>FCP_BloodPackHigh</HediffDef>
+            <HediffDef>FCP_Hediff_BloodPackHigh</HediffDef>
         </descriptionHyperlinks>
         <graphicData>
             <texPath>Chems/Rad_X/FCP_Rad_X</texPath>
@@ -791,7 +778,6 @@
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
-            <WorkToMake>400</WorkToMake>
             <MarketValue>22</MarketValue>
             <Mass>0.15</Mass>
         </statBases>
@@ -812,7 +798,652 @@
             <useEatingSpeedStat>false</useEatingSpeedStat>
             <outcomeDoers>
                 <li Class="IngestionOutcomeDoer_GiveHediff">
-                    <hediffDef>FCP_BloodPackHigh</hediffDef>
+                    <hediffDef>FCP_Hediff_BloodPackHigh</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Common</rarity>
+            </li>
+            <li Class="CompProperties_Drug">
+                <listOrder>1060</listOrder>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!--__________ Jet __________-->
+
+    <!-- Jet Drug -->
+
+    <ThingDef ParentName="MakeableDrugBase">
+        <defName>FCP_Chem_Jet</defName>
+        <label>Jet</label>
+        <description>A highly addictive meta-amphetamine created from brahmin dung fumes. Jet provides a significant boost to action speed and reflexes, but crashes hard and is notoriously difficult to quit.\n\nInvented by a chem genius named Myron, Jet became the most widespread and devastating drug in the post-war wasteland.</description>
+        <descriptionHyperlinks>
+            <HediffDef>FCP_Hediff_JetHigh</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Chems/Rad_X/FCP_Rad_X</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>400</WorkToMake>
+            <MarketValue>24</MarketValue>
+            <Mass>0.02</Mass>
+        </statBases>
+        <techLevel>Industrial</techLevel>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <baseIngestTicks>60</baseIngestTicks>
+            <nurseable>true</nurseable>
+            <drugCategory>Hard</drugCategory>
+            <ingestSound>Ingest_Smoke</ingestSound>
+            <ingestHoldOffsetStanding>
+                <northDefault>
+                    <offset>(0.18,0,0)</offset>
+                </northDefault>
+            </ingestHoldOffsetStanding>
+            <ingestCommandString>Inhale {0}</ingestCommandString>
+            <ingestReportString>Inhaling {0}.</ingestReportString>
+            <useEatingSpeedStat>false</useEatingSpeedStat>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Hediff_JetHigh</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <recipeMaker>
+            <researchPrerequisite>FCP_Research_Jet_Production</researchPrerequisite>
+            <recipeUsers>
+                <li>DrugLab</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Drug</soundWorking>
+        </recipeMaker>
+        <costList>
+            <Chemfuel>3</Chemfuel>
+            <Neutroamine>1</Neutroamine>
+        </costList>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Common</rarity>
+            </li>
+            <li Class="CompProperties_Drug">
+                <chemical>FCP_Chemical_Jet</chemical>
+                <addictiveness>0.15</addictiveness>
+                <listOrder>1100</listOrder>
+                <overdoseSeverityOffset>0.10~0.20</overdoseSeverityOffset>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!--__________ Psycho __________-->
+
+    <!-- Psycho Drug -->
+
+    <ThingDef ParentName="MakeableDrugBase">
+        <defName>FCP_Chem_Psycho</defName>
+        <label>Psycho</label>
+        <description>A military combat drug that sends the user into a berserker rage. Psycho dramatically increases damage output and resistance to injury, but suppresses higher brain functions and is highly addictive.\n\nDeveloped before the war for special forces operations, Psycho turns ordinary soldiers into fearless killing machines.</description>
+        <descriptionHyperlinks>
+            <HediffDef>FCP_Hediff_PsychoHigh</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Chems/Rad_X/FCP_Rad_X</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>600</WorkToMake>
+            <MarketValue>35</MarketValue>
+            <Mass>0.05</Mass>
+        </statBases>
+        <techLevel>Industrial</techLevel>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <baseIngestTicks>80</baseIngestTicks>
+            <nurseable>true</nurseable>
+            <drugCategory>Hard</drugCategory>
+            <ingestSound>Ingest_Inject</ingestSound>
+            <ingestHoldOffsetStanding>
+                <northDefault>
+                    <offset>(0.18,0,0)</offset>
+                </northDefault>
+            </ingestHoldOffsetStanding>
+            <ingestCommandString>Take {0}</ingestCommandString>
+            <ingestReportString>Taking {0}.</ingestReportString>
+            <useEatingSpeedStat>false</useEatingSpeedStat>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Hediff_PsychoHigh</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <recipeMaker>
+            <researchPrerequisite>FCP_Research_Psycho_Production</researchPrerequisite>
+            <recipeUsers>
+                <li>DrugLab</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Drug</soundWorking>
+        </recipeMaker>
+        <costList>
+            <Neutroamine>2</Neutroamine>
+            <Chemfuel>2</Chemfuel>
+        </costList>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Common</rarity>
+            </li>
+            <li Class="CompProperties_Drug">
+                <chemical>FCP_Chemical_Psycho</chemical>
+                <addictiveness>0.12</addictiveness>
+                <listOrder>1110</listOrder>
+                <overdoseSeverityOffset>0.12~0.24</overdoseSeverityOffset>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!--__________ Buffout __________-->
+
+    <!-- Buffout Drug -->
+
+    <ThingDef ParentName="MakeableDrugBase">
+        <defName>FCP_Chem_Buffout</defName>
+        <label>Buffout</label>
+        <description>A pre-war performance-enhancing steroid. Buffout dramatically increases strength and endurance, improving melee damage and carrying capacity. However, prolonged use leads to addiction and potential organ damage.\n\nPopular with athletes and laborers before the war, now a staple among wasteland fighters and scavengers.</description>
+        <descriptionHyperlinks>
+            <HediffDef>FCP_Hediff_BuffoutHigh</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Chems/Rad_X/FCP_Rad_X</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>500</WorkToMake>
+            <MarketValue>28</MarketValue>
+            <Mass>0.05</Mass>
+        </statBases>
+        <techLevel>Industrial</techLevel>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <baseIngestTicks>80</baseIngestTicks>
+            <nurseable>true</nurseable>
+            <drugCategory>Hard</drugCategory>
+            <ingestSound>Ingest_Pill</ingestSound>
+            <ingestHoldOffsetStanding>
+                <northDefault>
+                    <offset>(0.18,0,0)</offset>
+                </northDefault>
+            </ingestHoldOffsetStanding>
+            <ingestCommandString>Take {0}</ingestCommandString>
+            <ingestReportString>Taking {0}.</ingestReportString>
+            <useEatingSpeedStat>false</useEatingSpeedStat>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Hediff_BuffoutHigh</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <recipeMaker>
+            <researchPrerequisite>FCP_Research_Buffout_Production</researchPrerequisite>
+            <recipeUsers>
+                <li>DrugLab</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Drug</soundWorking>
+        </recipeMaker>
+        <costList>
+            <Neutroamine>2</Neutroamine>
+        </costList>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Common</rarity>
+            </li>
+            <li Class="CompProperties_Drug">
+                <chemical>FCP_Chemical_Buffout</chemical>
+                <addictiveness>0.08</addictiveness>
+                <listOrder>1120</listOrder>
+                <overdoseSeverityOffset>0.10~0.18</overdoseSeverityOffset>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!--__________ Mentats __________-->
+
+    <!-- Mentats Drug -->
+
+    <ThingDef ParentName="MakeableDrugBase" MayRequire="Rick.FCP.Plants">
+        <defName>FCP_Chem_Mentats</defName>
+        <label>Mentats</label>
+        <description>A nootropic drug that enhances cognitive function. Mentats improve perception, intelligence, and mental acuity, making users sharper and more aware of their surroundings. Prolonged use can lead to psychological dependency.\n\nFavored by scientists, traders, and anyone needing a mental edge in negotiations or technical work.</description>
+        <descriptionHyperlinks>
+            <HediffDef>FCP_Hediff_MentatsHigh</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Chems/Rad_X/FCP_Rad_X</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>450</WorkToMake>
+            <MarketValue>26</MarketValue>
+            <Mass>0.02</Mass>
+        </statBases>
+        <techLevel>Industrial</techLevel>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <baseIngestTicks>100</baseIngestTicks>
+            <nurseable>true</nurseable>
+            <drugCategory>Social</drugCategory>
+            <ingestSound>Ingest_Pill</ingestSound>
+            <ingestHoldOffsetStanding>
+                <northDefault>
+                    <offset>(0.18,0,0)</offset>
+                </northDefault>
+            </ingestHoldOffsetStanding>
+            <ingestCommandString>Take {0}</ingestCommandString>
+            <ingestReportString>Taking {0}.</ingestReportString>
+            <useEatingSpeedStat>false</useEatingSpeedStat>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Hediff_MentatsHigh</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <recipeMaker>
+            <researchPrerequisite>FCP_Research_Mentat_Production</researchPrerequisite>
+            <recipeUsers>
+                <li>DrugLab</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Drug</soundWorking>
+        </recipeMaker>
+        <costList>
+            <Neutroamine>2</Neutroamine>
+            <FCP_Raw_Broc_Flower>1</FCP_Raw_Broc_Flower>
+        </costList>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Common</rarity>
+            </li>
+            <li Class="CompProperties_Drug">
+                <chemical>FCP_Chemical_Mentats</chemical>
+                <addictiveness>0.06</addictiveness>
+                <listOrder>1130</listOrder>
+                <overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!--__________ Turbo __________-->
+
+    <!-- Turbo Drug -->
+
+    <ThingDef ParentName="MakeableDrugBase">
+        <defName>FCP_Chem_Turbo</defName>
+        <label>Turbo</label>
+        <description>An extremely potent inhaler that dramatically accelerates the user's perception and reflexes. Turbo makes time seem to slow down, allowing for superhuman reaction speeds. The effect is short-lived but incredibly powerful.\n\nCreated through an advanced refinement process, Turbo is one of the most sought-after combat enhancers in the wasteland.</description>
+        <descriptionHyperlinks>
+            <HediffDef>FCP_Hediff_TurboHigh</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Chems/Rad_X/FCP_Rad_X</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>1200</WorkToMake>
+            <MarketValue>85</MarketValue>
+            <Mass>0.05</Mass>
+        </statBases>
+        <techLevel>Industrial</techLevel>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <baseIngestTicks>60</baseIngestTicks>
+            <nurseable>true</nurseable>
+            <drugCategory>Hard</drugCategory>
+            <ingestSound>Ingest_Smoke</ingestSound>
+            <ingestHoldOffsetStanding>
+                <northDefault>
+                    <offset>(0.18,0,0)</offset>
+                </northDefault>
+            </ingestHoldOffsetStanding>
+            <ingestCommandString>Inhale {0}</ingestCommandString>
+            <ingestReportString>Inhaling {0}.</ingestReportString>
+            <useEatingSpeedStat>false</useEatingSpeedStat>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Hediff_TurboHigh</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <recipeMaker>
+            <researchPrerequisite>FCP_Research_Chem_Combinations</researchPrerequisite>
+            <recipeUsers>
+                <li>DrugLab</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Drug</soundWorking>
+        </recipeMaker>
+        <costList>
+            <Chemfuel>5</Chemfuel>
+            <Neutroamine>3</Neutroamine>
+            <MedicineIndustrial>1</MedicineIndustrial>
+        </costList>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Rare</rarity>
+            </li>
+            <li Class="CompProperties_Drug">
+                <listOrder>1140</listOrder>
+                <overdoseSeverityOffset>0.15~0.30</overdoseSeverityOffset>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!--__________ Slasher __________-->
+
+    <!-- Slasher Drug -->
+
+    <ThingDef ParentName="MakeableDrugBase">
+        <defName>FCP_Chem_Slasher</defName>
+        <label>Slasher</label>
+        <description>A brutal combat stimulant specifically designed to enhance melee combat effectiveness. Slasher increases melee damage output dramatically while reducing pain sensitivity, creating fearless close-combat fighters.\n\nPopular among raiders and melee specialists, though its addictive nature and side effects make it a dangerous choice.</description>
+        <descriptionHyperlinks>
+            <HediffDef>FCP_Hediff_SlasherHigh</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Chems/Rad_X/FCP_Rad_X</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>700</WorkToMake>
+            <MarketValue>42</MarketValue>
+            <Mass>0.05</Mass>
+        </statBases>
+        <techLevel>Industrial</techLevel>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <baseIngestTicks>80</baseIngestTicks>
+            <nurseable>true</nurseable>
+            <drugCategory>Hard</drugCategory>
+            <ingestSound>Ingest_Inject</ingestSound>
+            <ingestHoldOffsetStanding>
+                <northDefault>
+                    <offset>(0.18,0,0)</offset>
+                </northDefault>
+            </ingestHoldOffsetStanding>
+            <ingestCommandString>Take {0}</ingestCommandString>
+            <ingestReportString>Taking {0}.</ingestReportString>
+            <useEatingSpeedStat>false</useEatingSpeedStat>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Hediff_SlasherHigh</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <recipeMaker>
+            <researchPrerequisite>FCP_Research_Chem_Combinations</researchPrerequisite>
+            <recipeUsers>
+                <li>DrugLab</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Drug</soundWorking>
+        </recipeMaker>
+        <costList>
+            <Neutroamine>3</Neutroamine>
+            <Chemfuel>2</Chemfuel>
+        </costList>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Common</rarity>
+            </li>
+            <li Class="CompProperties_Drug">
+                <chemical>FCP_Chemical_Slasher</chemical>
+                <addictiveness>0.10</addictiveness>
+                <listOrder>1150</listOrder>
+                <overdoseSeverityOffset>0.12~0.22</overdoseSeverityOffset>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!--__________ Steady __________-->
+
+    <!-- Steady Drug -->
+
+    <ThingDef ParentName="MakeableDrugBase" MayRequire="Rick.FCP.Plants">
+        <defName>FCP_Chem_Steady</defName>
+        <label>Steady</label>
+        <description>A muscle relaxant and neural stabilizer that dramatically improves shooting accuracy and reduces weapon sway. Steady calms tremors and steadies the hands, making it invaluable for precision work and sniping.\n\nDeveloped for marksmen and surgeons, Steady has become essential for anyone requiring perfect hand-eye coordination.</description>
+        <descriptionHyperlinks>
+            <HediffDef>FCP_Hediff_SteadyHigh</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Chems/Rad_X/FCP_Rad_X</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>500</WorkToMake>
+            <MarketValue>30</MarketValue>
+            <Mass>0.03</Mass>
+        </statBases>
+        <techLevel>Industrial</techLevel>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <baseIngestTicks>100</baseIngestTicks>
+            <nurseable>true</nurseable>
+            <drugCategory>Medical</drugCategory>
+            <ingestSound>Ingest_Pill</ingestSound>
+            <ingestHoldOffsetStanding>
+                <northDefault>
+                    <offset>(0.18,0,0)</offset>
+                </northDefault>
+            </ingestHoldOffsetStanding>
+            <ingestCommandString>Take {0}</ingestCommandString>
+            <ingestReportString>Taking {0}.</ingestReportString>
+            <useEatingSpeedStat>false</useEatingSpeedStat>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Hediff_SteadyHigh</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <recipeMaker>
+            <researchPrerequisite>FCP_Research_Chem_Production</researchPrerequisite>
+            <recipeUsers>
+                <li>DrugLab</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Drug</soundWorking>
+        </recipeMaker>
+        <costList>
+            <Neutroamine>2</Neutroamine>
+            <FCP_Raw_Xander_Root>1</FCP_Raw_Xander_Root>
+        </costList>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Common</rarity>
+            </li>
+            <li Class="CompProperties_Drug">
+                <listOrder>1160</listOrder>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!--__________ Cateye __________-->
+
+    <!-- Cateye Drug -->
+
+    <ThingDef ParentName="MakeableDrugBase" MayRequire="Rick.FCP.Plants">
+        <defName>FCP_Chem_Cateye</defName>
+        <label>Cateye</label>
+        <description>An experimental drug that temporarily enhances night vision and low-light perception. Cateye dilates the pupils and enhances retinal sensitivity, allowing users to see clearly in near-total darkness.\n\nValued by night scouts and scavengers exploring dark ruins, though the light sensitivity during daytime can be problematic.</description>
+        <descriptionHyperlinks>
+            <HediffDef>FCP_Hediff_CateyeHigh</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Chems/Rad_X/FCP_Rad_X</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>400</WorkToMake>
+            <MarketValue>22</MarketValue>
+            <Mass>0.02</Mass>
+        </statBases>
+        <techLevel>Industrial</techLevel>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <baseIngestTicks>90</baseIngestTicks>
+            <nurseable>true</nurseable>
+            <drugCategory>Medical</drugCategory>
+            <ingestSound>Ingest_Pill</ingestSound>
+            <ingestHoldOffsetStanding>
+                <northDefault>
+                    <offset>(0.18,0,0)</offset>
+                </northDefault>
+            </ingestHoldOffsetStanding>
+            <ingestCommandString>Take {0}</ingestCommandString>
+            <ingestReportString>Taking {0}.</ingestReportString>
+            <useEatingSpeedStat>false</useEatingSpeedStat>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Hediff_CateyeHigh</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <recipeMaker>
+            <researchPrerequisite>FCP_Research_Chem_Production</researchPrerequisite>
+            <recipeUsers>
+                <li>DrugLab</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Drug</soundWorking>
+        </recipeMaker>
+        <costList>
+            <Neutroamine>1</Neutroamine>
+            <FCP_Raw_Broc_Flower>2</FCP_Raw_Broc_Flower>
+        </costList>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Common</rarity>
+            </li>
+            <li Class="CompProperties_Drug">
+                <listOrder>1170</listOrder>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!--__________ Addictol __________-->
+
+    <!-- Addictol Drug -->
+
+    <ThingDef ParentName="MakeableDrugBase" MayRequire="Rick.FCP.Plants">
+        <defName>FCP_Chem_Addictol</defName>
+        <label>Addictol</label>
+        <description>A powerful anti-addiction medication that purges the body of chemical dependencies. Addictol works by resetting neurological pathways and breaking the addiction cycle, though the process is uncomfortable and temporary exhaustion is common.\n\nA lifesaver for those trying to kick dangerous habits, though its high cost limits availability.</description>
+        <descriptionHyperlinks>
+            <HediffDef>FCP_Hediff_AddictolRecovery</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Chems/Rad_X/FCP_Rad_X</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>1800</WorkToMake>
+            <MarketValue>150</MarketValue>
+            <Mass>0.05</Mass>
+        </statBases>
+        <techLevel>Industrial</techLevel>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <baseIngestTicks>120</baseIngestTicks>
+            <nurseable>true</nurseable>
+            <drugCategory>Medical</drugCategory>
+            <ingestSound>Ingest_Inject</ingestSound>
+            <ingestHoldOffsetStanding>
+                <northDefault>
+                    <offset>(0.18,0,0)</offset>
+                </northDefault>
+            </ingestHoldOffsetStanding>
+            <ingestCommandString>Take {0}</ingestCommandString>
+            <ingestReportString>Taking {0}.</ingestReportString>
+            <useEatingSpeedStat>false</useEatingSpeedStat>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Hediff_AddictolRecovery</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <recipeMaker>
+            <researchPrerequisite>FCP_Research_Chem_Combinations</researchPrerequisite>
+            <recipeUsers>
+                <li>DrugLab</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Drug</soundWorking>
+        </recipeMaker>
+        <costList>
+            <Neutroamine>6</Neutroamine>
+            <MedicineIndustrial>2</MedicineIndustrial>
+        </costList>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Rare</rarity>
+            </li>
+            <li Class="CompProperties_Drug">
+                <listOrder>1180</listOrder>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!--__________ Fixer __________-->
+
+    <!-- Fixer Drug -->
+
+    <ThingDef ParentName="MakeableDrugBase" MayRequire="Rick.FCP.Plants">
+        <defName>FCP_Chem_Fixer</defName>
+        <label>Fixer</label>
+        <description>A specialized anti-addiction compound that helps break chemical dependencies. While less powerful than Addictol, Fixer is more readily available and still effective at combating withdrawal symptoms and reducing addiction severity.\n\nA wasteland doctor's tool for helping addicts recover without access to expensive pre-war medications.</description>
+        <descriptionHyperlinks>
+            <HediffDef>FCP_Hediff_FixerRecovery</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Chems/Rad_X/FCP_Rad_X</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>900</WorkToMake>
+            <MarketValue>65</MarketValue>
+            <Mass>0.05</Mass>
+        </statBases>
+        <techLevel>Industrial</techLevel>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <baseIngestTicks>120</baseIngestTicks>
+            <nurseable>true</nurseable>
+            <drugCategory>Medical</drugCategory>
+            <ingestSound>Ingest_Inject</ingestSound>
+            <ingestHoldOffsetStanding>
+                <northDefault>
+                    <offset>(0.18,0,0)</offset>
+                </northDefault>
+            </ingestHoldOffsetStanding>
+            <ingestCommandString>Take {0}</ingestCommandString>
+            <ingestReportString>Taking {0}.</ingestReportString>
+            <useEatingSpeedStat>false</useEatingSpeedStat>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Hediff_FixerRecovery</hediffDef>
                     <severity>1.0</severity>
                 </li>
             </outcomeDoers>
@@ -825,7 +1456,274 @@
             <soundWorking>Recipe_Drug</soundWorking>
         </recipeMaker>
         <costList>
-            <MedicineHerbal>1</MedicineHerbal>
+            <Neutroamine>3</Neutroamine>
+            <MedicineHerbal>2</MedicineHerbal>
+            <FCP_Raw_Xander_Root>2</FCP_Raw_Xander_Root>
+        </costList>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Common</rarity>
+            </li>
+            <li Class="CompProperties_Drug">
+                <listOrder>1190</listOrder>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!--__________ Ultrajet __________-->
+
+    <!-- Ultrajet Drug -->
+
+    <ThingDef ParentName="MakeableDrugBase">
+        <defName>FCP_Chem_Ultrajet</defName>
+        <label>Ultrajet</label>
+        <description>An extremely potent combination of Jet and Psycho. Ultrajet provides the speed enhancement of Jet combined with the combat fury of Psycho, creating a devastating combat stimulant. Highly addictive and dangerous.\n\nA favorite among the most desperate and violent wasteland fighters.</description>
+        <descriptionHyperlinks>
+            <HediffDef>FCP_Hediff_UltrajetHigh</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Chems/Rad_X/FCP_Rad_X</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>800</WorkToMake>
+            <MarketValue>75</MarketValue>
+            <Mass>0.05</Mass>
+        </statBases>
+        <techLevel>Industrial</techLevel>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <baseIngestTicks>70</baseIngestTicks>
+            <nurseable>true</nurseable>
+            <drugCategory>Hard</drugCategory>
+            <ingestSound>Ingest_Smoke</ingestSound>
+            <ingestHoldOffsetStanding>
+                <northDefault>
+                    <offset>(0.18,0,0)</offset>
+                </northDefault>
+            </ingestHoldOffsetStanding>
+            <ingestCommandString>Inhale {0}</ingestCommandString>
+            <ingestReportString>Inhaling {0}.</ingestReportString>
+            <useEatingSpeedStat>false</useEatingSpeedStat>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Hediff_UltrajetHigh</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <recipeMaker>
+            <researchPrerequisite>FCP_Research_Chem_Combinations</researchPrerequisite>
+            <recipeUsers>
+                <li>DrugLab</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Drug</soundWorking>
+        </recipeMaker>
+        <costList>
+            <FCP_Chem_Jet>1</FCP_Chem_Jet>
+            <FCP_Chem_Psycho>1</FCP_Chem_Psycho>
+            <Neutroamine>1</Neutroamine>
+        </costList>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Rare</rarity>
+            </li>
+            <li Class="CompProperties_Drug">
+                <chemical>FCP_Chemical_Ultrajet</chemical>
+                <addictiveness>0.20</addictiveness>
+                <listOrder>1200</listOrder>
+                <overdoseSeverityOffset>0.18~0.35</overdoseSeverityOffset>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!--__________ Rocket __________-->
+
+    <!-- Rocket Drug -->
+
+    <ThingDef ParentName="MakeableDrugBase">
+        <defName>FCP_Chem_Rocket</defName>
+        <label>Rocket</label>
+        <description>A dangerous mixture of Jet and Nuka-Cola that provides an intense burst of energy and speed. The combination of stimulants creates a powerful but unstable high that significantly boosts action speed and reflexes.\n\nPopular among couriers and raiders who need quick bursts of performance.</description>
+        <descriptionHyperlinks>
+            <HediffDef>FCP_Hediff_RocketHigh</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Chems/Rad_X/FCP_Rad_X</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>500</WorkToMake>
+            <MarketValue>48</MarketValue>
+            <Mass>0.05</Mass>
+        </statBases>
+        <techLevel>Industrial</techLevel>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <baseIngestTicks>80</baseIngestTicks>
+            <nurseable>true</nurseable>
+            <drugCategory>Hard</drugCategory>
+            <ingestSound>Ingest_Smoke</ingestSound>
+            <ingestHoldOffsetStanding>
+                <northDefault>
+                    <offset>(0.18,0,0)</offset>
+                </northDefault>
+            </ingestHoldOffsetStanding>
+            <ingestCommandString>Inhale {0}</ingestCommandString>
+            <ingestReportString>Inhaling {0}.</ingestReportString>
+            <useEatingSpeedStat>false</useEatingSpeedStat>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Hediff_RocketHigh</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <recipeMaker>
+            <researchPrerequisite>FCP_Research_Chem_Combinations</researchPrerequisite>
+            <recipeUsers>
+                <li>DrugLab</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Drug</soundWorking>
+        </recipeMaker>
+        <costList>
+            <FCP_Chem_Jet>1</FCP_Chem_Jet>
+            <Chemfuel>2</Chemfuel>
+        </costList>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Common</rarity>
+            </li>
+            <li Class="CompProperties_Drug">
+                <chemical>FCP_Chemical_Jet</chemical>
+                <addictiveness>0.12</addictiveness>
+                <listOrder>1210</listOrder>
+                <overdoseSeverityOffset>0.12~0.24</overdoseSeverityOffset>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!--__________ Berry Mentats __________-->
+
+    <!-- Berry Mentats Drug -->
+
+    <ThingDef ParentName="MakeableDrugBase" MayRequire="Rick.FCP.Plants">
+        <defName>FCP_Chem_Berry_Mentats</defName>
+        <label>Berry Mentats</label>
+        <description>A Mentats variant infused with berry flavoring and enhanced formula. Berry Mentats significantly boost charisma and social skills, making the user more persuasive and likable in negotiations and social situations.\n\nFavored by traders, diplomats, and anyone who needs to make a good impression.</description>
+        <descriptionHyperlinks>
+            <HediffDef>FCP_Hediff_BerryMentatsHigh</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Chems/Rad_X/FCP_Rad_X</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>550</WorkToMake>
+            <MarketValue>38</MarketValue>
+            <Mass>0.02</Mass>
+        </statBases>
+        <techLevel>Industrial</techLevel>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <baseIngestTicks>100</baseIngestTicks>
+            <nurseable>true</nurseable>
+            <drugCategory>Social</drugCategory>
+            <ingestSound>Ingest_Pill</ingestSound>
+            <ingestHoldOffsetStanding>
+                <northDefault>
+                    <offset>(0.18,0,0)</offset>
+                </northDefault>
+            </ingestHoldOffsetStanding>
+            <ingestCommandString>Take {0}</ingestCommandString>
+            <ingestReportString>Taking {0}.</ingestReportString>
+            <useEatingSpeedStat>false</useEatingSpeedStat>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Hediff_BerryMentatsHigh</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <recipeMaker>
+            <researchPrerequisite>FCP_Research_Chem_Combinations</researchPrerequisite>
+            <recipeUsers>
+                <li>DrugLab</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Drug</soundWorking>
+        </recipeMaker>
+        <costList>
+            <FCP_Chem_Mentats>1</FCP_Chem_Mentats>
+            <FCP_Raw_Tarberry>2</FCP_Raw_Tarberry>
+        </costList>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Common</rarity>
+            </li>
+            <li Class="CompProperties_Drug">
+                <chemical>FCP_Chemical_Mentats</chemical>
+                <addictiveness>0.05</addictiveness>
+                <listOrder>1220</listOrder>
+                <overdoseSeverityOffset>0.06~0.12</overdoseSeverityOffset>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!--__________ Grape Mentats __________-->
+
+    <!-- Grape Mentats Drug -->
+
+    <ThingDef ParentName="MakeableDrugBase" MayRequire="Rick.FCP.Plants">
+        <defName>FCP_Chem_Grape_Mentats</defName>
+        <label>Grape Mentats</label>
+        <description>A balanced Mentats variant that enhances both intelligence and charisma. Grape Mentats make the user both smarter and more socially adept, excellent for technical negotiations or scientific presentations.\n\nThe choice of scientists who need to explain complex ideas to non-experts.</description>
+        <descriptionHyperlinks>
+            <HediffDef>FCP_Hediff_GrapeMentatsHigh</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Chems/Rad_X/FCP_Rad_X</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>550</WorkToMake>
+            <MarketValue>40</MarketValue>
+            <Mass>0.02</Mass>
+        </statBases>
+        <techLevel>Industrial</techLevel>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <baseIngestTicks>100</baseIngestTicks>
+            <nurseable>true</nurseable>
+            <drugCategory>Social</drugCategory>
+            <ingestSound>Ingest_Pill</ingestSound>
+            <ingestHoldOffsetStanding>
+                <northDefault>
+                    <offset>(0.18,0,0)</offset>
+                </northDefault>
+            </ingestHoldOffsetStanding>
+            <ingestCommandString>Take {0}</ingestCommandString>
+            <ingestReportString>Taking {0}.</ingestReportString>
+            <useEatingSpeedStat>false</useEatingSpeedStat>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Hediff_GrapeMentatsHigh</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <recipeMaker>
+            <researchPrerequisite>FCP_Research_Chem_Combinations</researchPrerequisite>
+            <recipeUsers>
+                <li>DrugLab</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Drug</soundWorking>
+        </recipeMaker>
+        <costList>
+            <FCP_Chem_Mentats>1</FCP_Chem_Mentats>
             <Neutroamine>1</Neutroamine>
         </costList>
         <comps>
@@ -833,7 +1731,538 @@
                 <rarity>Common</rarity>
             </li>
             <li Class="CompProperties_Drug">
-                <listOrder>1060</listOrder>
+                <chemical>FCP_Chemical_Mentats</chemical>
+                <addictiveness>0.05</addictiveness>
+                <listOrder>1230</listOrder>
+                <overdoseSeverityOffset>0.06~0.12</overdoseSeverityOffset>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!--__________ Orange Mentats __________-->
+
+    <!-- Orange Mentats Drug -->
+
+    <ThingDef ParentName="MakeableDrugBase" MayRequire="Rick.FCP.Plants">
+        <defName>FCP_Chem_Orange_Mentats</defName>
+        <label>Orange Mentats</label>
+        <description>A specialized Mentats variant that dramatically enhances perception and awareness. Orange Mentats sharpen the senses and improve accuracy, making them invaluable for scouts, snipers, and anyone needing enhanced sensory perception.\n\nA marksman's secret weapon for those critical shots.</description>
+        <descriptionHyperlinks>
+            <HediffDef>FCP_Hediff_OrangeMentatsHigh</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Chems/Rad_X/FCP_Rad_X</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>550</WorkToMake>
+            <MarketValue>42</MarketValue>
+            <Mass>0.02</Mass>
+        </statBases>
+        <techLevel>Industrial</techLevel>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <baseIngestTicks>100</baseIngestTicks>
+            <nurseable>true</nurseable>
+            <drugCategory>Social</drugCategory>
+            <ingestSound>Ingest_Pill</ingestSound>
+            <ingestHoldOffsetStanding>
+                <northDefault>
+                    <offset>(0.18,0,0)</offset>
+                </northDefault>
+            </ingestHoldOffsetStanding>
+            <ingestCommandString>Take {0}</ingestCommandString>
+            <ingestReportString>Taking {0}.</ingestReportString>
+            <useEatingSpeedStat>false</useEatingSpeedStat>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Hediff_OrangeMentatsHigh</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <recipeMaker>
+            <researchPrerequisite>FCP_Research_Chem_Combinations</researchPrerequisite>
+            <recipeUsers>
+                <li>DrugLab</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Drug</soundWorking>
+        </recipeMaker>
+        <costList>
+            <FCP_Chem_Mentats>1</FCP_Chem_Mentats>
+            <FCP_Raw_Mutfruit>2</FCP_Raw_Mutfruit>
+        </costList>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Common</rarity>
+            </li>
+            <li Class="CompProperties_Drug">
+                <chemical>FCP_Chemical_Mentats</chemical>
+                <addictiveness>0.05</addictiveness>
+                <listOrder>1240</listOrder>
+                <overdoseSeverityOffset>0.06~0.12</overdoseSeverityOffset>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!--__________ Party Time Mentats __________-->
+
+    <!-- Party Time Mentats Drug -->
+
+    <ThingDef ParentName="MakeableDrugBase" MayRequire="Rick.FCP.Plants">
+        <defName>FCP_Chem_Party_Time_Mentats</defName>
+        <label>Party Time Mentats</label>
+        <description>A recreational Mentats variant designed for social gatherings. Party Time Mentats boost charisma and mood, making social interactions more enjoyable and successful while providing a mild euphoric effect.\n\nThe life of any wasteland party, though best used sparingly.</description>
+        <descriptionHyperlinks>
+            <HediffDef>FCP_Hediff_PartyTimeMentatsHigh</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Chems/Rad_X/FCP_Rad_X</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>550</WorkToMake>
+            <MarketValue>35</MarketValue>
+            <Mass>0.02</Mass>
+        </statBases>
+        <techLevel>Industrial</techLevel>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <baseIngestTicks>100</baseIngestTicks>
+            <nurseable>true</nurseable>
+            <drugCategory>Social</drugCategory>
+            <ingestSound>Ingest_Pill</ingestSound>
+            <ingestHoldOffsetStanding>
+                <northDefault>
+                    <offset>(0.18,0,0)</offset>
+                </northDefault>
+            </ingestHoldOffsetStanding>
+            <ingestCommandString>Take {0}</ingestCommandString>
+            <ingestReportString>Taking {0}.</ingestReportString>
+            <useEatingSpeedStat>false</useEatingSpeedStat>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Hediff_PartyTimeMentatsHigh</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <recipeMaker>
+            <researchPrerequisite>FCP_Research_Chem_Combinations</researchPrerequisite>
+            <recipeUsers>
+                <li>DrugLab</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Drug</soundWorking>
+        </recipeMaker>
+        <costList>
+            <FCP_Chem_Mentats>1</FCP_Chem_Mentats>
+            <Neutroamine>1</Neutroamine>
+        </costList>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Common</rarity>
+            </li>
+            <li Class="CompProperties_Drug">
+                <chemical>FCP_Chemical_Mentats</chemical>
+                <addictiveness>0.05</addictiveness>
+                <listOrder>1250</listOrder>
+                <overdoseSeverityOffset>0.06~0.12</overdoseSeverityOffset>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!--__________ Day Tripper __________-->
+
+    <!-- Day Tripper Drug -->
+
+    <ThingDef ParentName="MakeableDrugBase">
+        <defName>FCP_Chem_Day_Tripper</defName>
+        <label>Day Tripper</label>
+        <description>A pre-war recreational drug that enhances mood and social charm. Day Tripper makes the user more charismatic and likable while providing a pleasant mild high. Moderately addictive with regular use.\n\nPopular in pre-war social circles, still used by those seeking to improve their social standing.</description>
+        <descriptionHyperlinks>
+            <HediffDef>FCP_Hediff_DayTripperHigh</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Chems/Rad_X/FCP_Rad_X</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>400</WorkToMake>
+            <MarketValue>30</MarketValue>
+            <Mass>0.03</Mass>
+        </statBases>
+        <techLevel>Industrial</techLevel>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <baseIngestTicks>90</baseIngestTicks>
+            <nurseable>true</nurseable>
+            <drugCategory>Social</drugCategory>
+            <ingestSound>Ingest_Pill</ingestSound>
+            <ingestHoldOffsetStanding>
+                <northDefault>
+                    <offset>(0.18,0,0)</offset>
+                </northDefault>
+            </ingestHoldOffsetStanding>
+            <ingestCommandString>Take {0}</ingestCommandString>
+            <ingestReportString>Taking {0}.</ingestReportString>
+            <useEatingSpeedStat>false</useEatingSpeedStat>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Hediff_DayTripperHigh</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <recipeMaker>
+            <researchPrerequisite>FCP_Research_Chem_Production</researchPrerequisite>
+            <recipeUsers>
+                <li>DrugLab</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Drug</soundWorking>
+        </recipeMaker>
+        <costList>
+            <Neutroamine>2</Neutroamine>
+        </costList>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Common</rarity>
+            </li>
+            <li Class="CompProperties_Drug">
+                <chemical>FCP_Chemical_DayTripper</chemical>
+                <addictiveness>0.07</addictiveness>
+                <listOrder>1260</listOrder>
+                <overdoseSeverityOffset>0.08~0.16</overdoseSeverityOffset>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!--__________ X-Cell __________-->
+
+    <!-- X-Cell Drug -->
+
+    <ThingDef ParentName="MakeableDrugBase">
+        <defName>FCP_Chem_X_Cell</defName>
+        <label>X-Cell</label>
+        <description>An extremely rare and expensive pre-war super-drug that enhances all physical and mental capabilities simultaneously. X-Cell provides comprehensive enhancement across all stats but is incredibly difficult and costly to produce.\n\nA pinnacle of pre-war pharmaceutical achievement, X-Cell is the ultimate performance enhancer.</description>
+        <descriptionHyperlinks>
+            <HediffDef>FCP_Hediff_XCellHigh</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Chems/Rad_X/FCP_Rad_X</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>2400</WorkToMake>
+            <MarketValue>250</MarketValue>
+            <Mass>0.05</Mass>
+        </statBases>
+        <techLevel>Industrial</techLevel>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <baseIngestTicks>120</baseIngestTicks>
+            <nurseable>true</nurseable>
+            <drugCategory>Medical</drugCategory>
+            <ingestSound>Ingest_Inject</ingestSound>
+            <ingestHoldOffsetStanding>
+                <northDefault>
+                    <offset>(0.18,0,0)</offset>
+                </northDefault>
+            </ingestHoldOffsetStanding>
+            <ingestCommandString>Take {0}</ingestCommandString>
+            <ingestReportString>Taking {0}.</ingestReportString>
+            <useEatingSpeedStat>false</useEatingSpeedStat>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Hediff_XCellHigh</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <recipeMaker>
+            <researchPrerequisite>FCP_Research_Chem_Combinations</researchPrerequisite>
+            <recipeUsers>
+                <li>DrugLab</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Drug</soundWorking>
+        </recipeMaker>
+        <costList>
+            <Neutroamine>10</Neutroamine>
+            <MedicineIndustrial>3</MedicineIndustrial>
+        </costList>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Unique</rarity>
+            </li>
+            <li Class="CompProperties_Drug">
+                <listOrder>1270</listOrder>
+                <overdoseSeverityOffset>0.05~0.10</overdoseSeverityOffset>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!--__________ Daddy-O __________-->
+
+    <!-- Daddy-O Drug -->
+
+    <ThingDef ParentName="MakeableDrugBase" MayRequire="Rick.FCP.Plants">
+        <defName>FCP_Chem_Daddy_O</defName>
+        <label>Daddy-O</label>
+        <description>A pre-war cognitive enhancer that boosts intelligence and perception at the cost of social skills. Daddy-O makes the user smarter and more perceptive but more socially awkward and withdrawn.\n\nFavored by researchers and technicians who prioritize mental acuity over social interaction.</description>
+        <descriptionHyperlinks>
+            <HediffDef>FCP_Hediff_DaddyOHigh</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Chems/Rad_X/FCP_Rad_X</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>500</WorkToMake>
+            <MarketValue>32</MarketValue>
+            <Mass>0.03</Mass>
+        </statBases>
+        <techLevel>Industrial</techLevel>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <baseIngestTicks>100</baseIngestTicks>
+            <nurseable>true</nurseable>
+            <drugCategory>Social</drugCategory>
+            <ingestSound>Ingest_Pill</ingestSound>
+            <ingestHoldOffsetStanding>
+                <northDefault>
+                    <offset>(0.18,0,0)</offset>
+                </northDefault>
+            </ingestHoldOffsetStanding>
+            <ingestCommandString>Take {0}</ingestCommandString>
+            <ingestReportString>Taking {0}.</ingestReportString>
+            <useEatingSpeedStat>false</useEatingSpeedStat>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Hediff_DaddyOHigh</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <recipeMaker>
+            <researchPrerequisite>FCP_Research_Chem_Production</researchPrerequisite>
+            <recipeUsers>
+                <li>DrugLab</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Drug</soundWorking>
+        </recipeMaker>
+        <costList>
+            <Neutroamine>2</Neutroamine>
+            <FCP_Raw_Xander_Root>2</FCP_Raw_Xander_Root>
+        </costList>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Common</rarity>
+            </li>
+            <li Class="CompProperties_Drug">
+                <chemical>FCP_Chemical_DaddyO</chemical>
+                <addictiveness>0.06</addictiveness>
+                <listOrder>1280</listOrder>
+                <overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!--__________ Atomic Cocktail __________-->
+
+    <!-- Atomic Cocktail Drug -->
+
+    <ThingDef ParentName="MakeableDrugBase" MayRequire="Rick.FCP.Plants">
+        <defName>FCP_Chem_Atomic_Cocktail</defName>
+        <label>Atomic Cocktail</label>
+        <description>A pre-war mixed drink that combines radiation resistance with physical enhancement. The Atomic Cocktail was popular among military personnel in high-radiation zones, providing both protection and a strength boost.\n\nDespite its name, it's a carefully formulated pharmaceutical beverage rather than a recreational drink.</description>
+        <descriptionHyperlinks>
+            <HediffDef>FCP_Hediff_AtomicCocktailHigh</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Chems/Rad_X/FCP_Rad_X</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>600</WorkToMake>
+            <MarketValue>45</MarketValue>
+            <Mass>0.20</Mass>
+        </statBases>
+        <techLevel>Industrial</techLevel>
+        <ingestible>
+            <foodType>Fluid, Processed</foodType>
+            <baseIngestTicks>120</baseIngestTicks>
+            <nurseable>true</nurseable>
+            <drugCategory>Medical</drugCategory>
+            <ingestSound>Ingest_Beer</ingestSound>
+            <ingestHoldOffsetStanding>
+                <northDefault>
+                    <offset>(0.18,0,0)</offset>
+                </northDefault>
+            </ingestHoldOffsetStanding>
+            <ingestCommandString>Drink {0}</ingestCommandString>
+            <ingestReportString>Drinking {0}.</ingestReportString>
+            <useEatingSpeedStat>false</useEatingSpeedStat>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Hediff_AtomicCocktailHigh</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <recipeMaker>
+            <researchPrerequisite>FCP_Research_Chem_Combinations</researchPrerequisite>
+            <recipeUsers>
+                <li>DrugLab</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Drug</soundWorking>
+        </recipeMaker>
+        <costList>
+            <Neutroamine>2</Neutroamine>
+            <FCP_Raw_Mutfruit>1</FCP_Raw_Mutfruit>
+        </costList>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Common</rarity>
+            </li>
+            <li Class="CompProperties_Drug">
+                <listOrder>1290</listOrder>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!--__________ Rebound __________-->
+
+    <!-- Rebound Drug -->
+
+    <ThingDef ParentName="MakeableDrugBase" MayRequire="Rick.FCP.Plants">
+        <defName>FCP_Chem_Rebound</defName>
+        <label>Rebound</label>
+        <description>A basic anti-addiction medication that helps reduce withdrawal symptoms and cravings. While not as powerful as Addictol, Rebound is more affordable and can still provide significant relief for those struggling with chemical dependencies.\n\nA common choice for wasteland clinics treating addicted patients on a budget.</description>
+        <descriptionHyperlinks>
+            <HediffDef>FCP_Hediff_ReboundRecovery</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Chems/Rad_X/FCP_Rad_X</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>600</WorkToMake>
+            <MarketValue>45</MarketValue>
+            <Mass>0.05</Mass>
+        </statBases>
+        <techLevel>Industrial</techLevel>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <baseIngestTicks>120</baseIngestTicks>
+            <nurseable>true</nurseable>
+            <drugCategory>Medical</drugCategory>
+            <ingestSound>Ingest_Inject</ingestSound>
+            <ingestHoldOffsetStanding>
+                <northDefault>
+                    <offset>(0.18,0,0)</offset>
+                </northDefault>
+            </ingestHoldOffsetStanding>
+            <ingestCommandString>Take {0}</ingestCommandString>
+            <ingestReportString>Taking {0}.</ingestReportString>
+            <useEatingSpeedStat>false</useEatingSpeedStat>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Hediff_ReboundRecovery</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <recipeMaker>
+            <researchPrerequisite>FCP_Research_Medicinal_Drugs</researchPrerequisite>
+            <recipeUsers>
+                <li>DrugLab</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Drug</soundWorking>
+        </recipeMaker>
+        <costList>
+            <Neutroamine>2</Neutroamine>
+            <MedicineHerbal>1</MedicineHerbal>
+            <FCP_Raw_Broc_Flower>1</FCP_Raw_Broc_Flower>
+        </costList>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Common</rarity>
+            </li>
+            <li Class="CompProperties_Drug">
+                <listOrder>1300</listOrder>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!--__________ Dixon's Jet __________-->
+
+    <!-- Dixon's Jet Drug -->
+
+    <ThingDef ParentName="MakeableDrugBase">
+        <defName>FCP_Chem_Dixons_Jet</defName>
+        <label>Dixon's Jet</label>
+        <description>A refined and purified version of Jet created through an advanced filtration process. Dixon's Jet provides a stronger, longer-lasting high with fewer impurities than standard Jet, though it remains highly addictive.\n\nNamed after its creator, this premium variant commands high prices among Jet users.</description>
+        <descriptionHyperlinks>
+            <HediffDef>FCP_Hediff_DixonsJetHigh</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Chems/Rad_X/FCP_Rad_X</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <rotatable>false</rotatable>
+        <statBases>
+            <WorkToMake>600</WorkToMake>
+            <MarketValue>42</MarketValue>
+            <Mass>0.02</Mass>
+        </statBases>
+        <techLevel>Industrial</techLevel>
+        <ingestible>
+            <foodType>Processed</foodType>
+            <baseIngestTicks>60</baseIngestTicks>
+            <nurseable>true</nurseable>
+            <drugCategory>Hard</drugCategory>
+            <ingestSound>Ingest_Smoke</ingestSound>
+            <ingestHoldOffsetStanding>
+                <northDefault>
+                    <offset>(0.18,0,0)</offset>
+                </northDefault>
+            </ingestHoldOffsetStanding>
+            <ingestCommandString>Inhale {0}</ingestCommandString>
+            <ingestReportString>Inhaling {0}.</ingestReportString>
+            <useEatingSpeedStat>false</useEatingSpeedStat>
+            <outcomeDoers>
+                <li Class="IngestionOutcomeDoer_GiveHediff">
+                    <hediffDef>FCP_Hediff_DixonsJetHigh</hediffDef>
+                    <severity>1.0</severity>
+                </li>
+            </outcomeDoers>
+        </ingestible>
+        <recipeMaker>
+            <researchPrerequisite>FCP_Research_Chem_Combinations</researchPrerequisite>
+            <recipeUsers>
+                <li>DrugLab</li>
+            </recipeUsers>
+            <soundWorking>Recipe_Drug</soundWorking>
+        </recipeMaker>
+        <costList>
+            <FCP_Chem_Jet>1</FCP_Chem_Jet>
+            <Neutroamine>2</Neutroamine>
+        </costList>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Common</rarity>
+            </li>
+            <li Class="CompProperties_Drug">
+                <chemical>FCP_Chemical_Jet</chemical>
+                <addictiveness>0.16</addictiveness>
+                <listOrder>1310</listOrder>
+                <overdoseSeverityOffset>0.10~0.20</overdoseSeverityOffset>
             </li>
         </comps>
     </ThingDef>

@@ -140,7 +140,7 @@
     <!-- Rad-X Effect Hediff -->
 
     <HediffDef>
-        <defName>FCP_RadXHigh</defName>
+        <defName>FCP_Hediff_RadXHigh</defName>
         <label>Rad-X</label>
         <description>Rad-X is providing protection against radiation and toxic contamination by altering cellular structure. Side effects include minor disorientation and reduced reflexes.</description>
         <hediffClass>HediffWithComps</hediffClass>
@@ -182,7 +182,7 @@
     <!-- Rad-Away Effect Hediff -->
 
     <HediffDef>
-        <defName>FCP_RadawayHigh</defName>
+        <defName>FCP_Hediff_RadawayHigh</defName>
         <label>Rad-Away</label>
         <description>Rad-Away is actively purging radiation from the bloodstream. While effective, the process is exhausting.</description>
         <hediffClass>HediffWithComps</hediffClass>
@@ -225,7 +225,7 @@
     <!-- Healing Powder Effect Hediff -->
 
     <HediffDef>
-        <defName>FCP_HealingPowderHigh</defName>
+        <defName>FCP_Hediff_HealingPowderHigh</defName>
         <label>healing powder</label>
         <description>Traditional wasteland medicine is providing gradual healing. The mixture of broc flower and xander root promotes natural tissue regeneration.</description>
         <hediffClass>HediffWithComps</hediffClass>
@@ -256,7 +256,7 @@
     <!-- Med-X Effect Hediff -->
 
     <HediffDef>
-        <defName>FCP_MedXHigh</defName>
+        <defName>FCP_Hediff_MedXHigh</defName>
         <label>Med-X</label>
         <description>Med-X is blocking pain signals and providing damage resistance. The powerful analgesic effect makes injuries less debilitating.</description>
         <hediffClass>HediffWithComps</hediffClass>
@@ -294,7 +294,7 @@
     <!-- Hydra Effect Hediff -->
 
     <HediffDef>
-        <defName>FCP_HydraHigh</defName>
+        <defName>FCP_Hediff_HydraHigh</defName>
         <label>Hydra</label>
         <description>Hydra is rapidly regenerating damaged tissue and healing crippled limbs. The process is intense and causes disorientation.</description>
         <hediffClass>HediffWithComps</hediffClass>
@@ -331,7 +331,7 @@
     <!-- Doctor's Bag Effect Hediff -->
 
     <HediffDef>
-        <defName>FCP_DoctorsBagHigh</defName>
+        <defName>FCP_Hediff_DoctorsBagHigh</defName>
         <label>field surgery</label>
         <description>Comprehensive medical treatment is repairing injuries and crippled limbs. The extensive field surgery provides substantial healing over time.</description>
         <hediffClass>HediffWithComps</hediffClass>
@@ -340,21 +340,16 @@
         <maxSeverity>1.0</maxSeverity>
         <isBad>false</isBad>
         <comps>
-            <li Class="HediffCompProperties_Disappears">
-                <disappearsAfterTicks>10000</disappearsAfterTicks> <!-- ~4 hours -->
-                <showRemainingTime>true</showRemainingTime>
-            </li>
-            <li Class="HediffCompProperties_SeverityPerDay">
-                <severityPerDay>-0.9</severityPerDay>
+            <li Class="StimPacks.Comps.StimPackProp">
+                <HealPermanentInjuries>true</HealPermanentInjuries>
+                <HealMissingBodyParts>true</HealMissingBodyParts>
+                <RemoveHediffWhenDone>True</RemoveHediffWhenDone>
+                <ScaleHealedAmountWithTotalHitPoints>true</ScaleHealedAmountWithTotalHitPoints>
+                <HealedAmount>10</HealedAmount>
+                <TickMinimumBetweenHealing>35</TickMinimumBetweenHealing>
+                <TickMaximumBetweenHealing>45</TickMaximumBetweenHealing>
             </li>
         </comps>
-        <stages>
-            <li>
-                <statOffsets>
-                    <InjuryHealingFactor>0.80</InjuryHealingFactor>
-                </statOffsets>
-            </li>
-        </stages>
     </HediffDef>
 
     <!--__________ Blood Pack __________-->
@@ -362,7 +357,7 @@
     <!-- Blood Pack Effect Hediff -->
 
     <HediffDef>
-        <defName>FCP_BloodPackHigh</defName>
+        <defName>FCP_Hediff_BloodPackHigh</defName>
         <label>blood transfusion</label>
         <description>Fresh blood is restoring blood volume and promoting healing. The transfusion helps stabilize the patient.</description>
         <hediffClass>HediffWithComps</hediffClass>
@@ -389,6 +384,1550 @@
                 </capMods>
                 <statOffsets>
                     <InjuryHealingFactor>0.35</InjuryHealingFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--__________ Jet __________-->
+
+    <ChemicalDef>
+        <defName>FCP_Chemical_Jet</defName>
+        <label>Jet</label>
+        <addictionHediff>FCP_Addiction_Jet</addictionHediff>
+        <toleranceHediff>FCP_Hediff_JetTolerance</toleranceHediff>
+        <onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
+        <geneToleranceBuildupFactorResist>0.5</geneToleranceBuildupFactorResist>
+        <geneToleranceBuildupFactorImmune>0</geneToleranceBuildupFactorImmune>
+    </ChemicalDef>
+
+    <NeedDef ParentName="DrugAddictionNeedBase">
+        <defName>FCP_Need_Jet</defName>
+        <needClass>Need_Chemical</needClass>
+        <label>Jet</label>
+        <description>Because of a Jet addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+        <listPriority>40</listPriority>
+    </NeedDef>
+
+    <HediffDef ParentName="DrugToleranceBase">
+        <defName>FCP_Hediff_JetTolerance</defName>
+        <label>Jet tolerance</label>
+        <description>A built-up tolerance to Jet. The more severe this tolerance is, the more Jet it takes to get the same effect.</description>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.020</severityPerDay>
+            </li>
+            <li Class="HediffCompProperties_DrugEffectFactor">
+                <chemical>FCP_Chemical_Jet</chemical>
+            </li>
+        </comps>
+        <hediffGivers>
+            <li Class="HediffGiver_RandomDrugEffect">
+                <hediff>ChemicalDamageSevere</hediff>
+                <severityToMtbDaysCurve>
+                    <points>
+                        <li>(0.45, 99999)</li>
+                        <li>(0.5, 120)</li>
+                        <li>(1, 90)</li>
+                    </points>
+                </severityToMtbDaysCurve>
+                <partsToAffect>
+                    <li>Brain</li>
+                </partsToAffect>
+            </li>
+        </hediffGivers>
+    </HediffDef>
+
+    <HediffDef ParentName="AddictionBase">
+        <defName>FCP_Addiction_Jet</defName>
+        <label>Jet addiction</label>
+        <description>A chemical addiction to Jet. Long-term presence of Jet has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug. Without regular doses of Jet, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
+        <hediffClass>Hediff_Addiction</hediffClass>
+        <chemicalNeed>FCP_Need_Jet</chemicalNeed>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.0250</severityPerDay>
+                <showDaysToRecover>true</showDaysToRecover>
+            </li>
+        </comps>
+        <stages>
+            <li>
+            </li>
+            <li>
+                <label>withdrawal</label>
+                <restFallFactorOffset>0.4</restFallFactorOffset>
+                <socialFightChanceFactor>3.0</socialFightChanceFactor>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.30</offset>
+                    </li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>-0.40</offset>
+                    </li>
+                </capMods>
+                <mentalStateGivers>
+                    <li>
+                        <mentalState>Binging_DrugExtreme</mentalState>
+                        <mtbDays>30</mtbDays>
+                    </li>
+                    <li>
+                        <mentalState>Wander_Psychotic</mentalState>
+                        <mtbDays>8</mtbDays>
+                    </li>
+                </mentalStateGivers>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThoughtDef>
+        <defName>FCP_Hediff_JetWithdrawal</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>FCP_Addiction_Jet</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <visible>false</visible>
+            </li>
+            <li>
+                <label>Jet withdrawal</label>
+                <description>Everything feels so slow. I need another hit of Jet. Just one more!</description>
+                <baseMoodEffect>-40</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <HediffDef>
+        <defName>FCP_Hediff_JetHigh</defName>
+        <label>high on Jet</label>
+        <labelNoun>a Jet high</labelNoun>
+        <description>Enhanced by Jet. Movement speed and work speed dramatically increased.</description>
+        <hediffClass>Hediff_High</hediffClass>
+        <defaultLabelColor>(1,0.5,0.2)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-4.0</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.35</offset>
+                    </li>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>0.20</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--__________ Psycho __________-->
+
+    <ChemicalDef>
+        <defName>FCP_Chemical_Psycho</defName>
+        <label>Psycho</label>
+        <addictionHediff>FCP_Addiction_Psycho</addictionHediff>
+        <toleranceHediff>FCP_Hediff_PsychoTolerance</toleranceHediff>
+        <onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
+        <geneToleranceBuildupFactorResist>0.5</geneToleranceBuildupFactorResist>
+        <geneToleranceBuildupFactorImmune>0</geneToleranceBuildupFactorImmune>
+    </ChemicalDef>
+
+    <NeedDef ParentName="DrugAddictionNeedBase">
+        <defName>FCP_Need_Psycho</defName>
+        <needClass>Need_Chemical</needClass>
+        <label>Psycho</label>
+        <description>Because of a Psycho addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+        <listPriority>42</listPriority>
+    </NeedDef>
+
+    <HediffDef ParentName="DrugToleranceBase">
+        <defName>FCP_Hediff_PsychoTolerance</defName>
+        <label>Psycho tolerance</label>
+        <description>A built-up tolerance to Psycho. The more severe this tolerance is, the more Psycho it takes to get the same effect.</description>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.018</severityPerDay>
+            </li>
+            <li Class="HediffCompProperties_DrugEffectFactor">
+                <chemical>FCP_Chemical_Psycho</chemical>
+            </li>
+        </comps>
+        <hediffGivers>
+            <li Class="HediffGiver_RandomDrugEffect">
+                <hediff>ChemicalDamageSevere</hediff>
+                <severityToMtbDaysCurve>
+                    <points>
+                        <li>(0.45, 99999)</li>
+                        <li>(0.5, 150)</li>
+                        <li>(1, 120)</li>
+                    </points>
+                </severityToMtbDaysCurve>
+                <partsToAffect>
+                    <li>Brain</li>
+                </partsToAffect>
+            </li>
+        </hediffGivers>
+    </HediffDef>
+
+    <HediffDef ParentName="AddictionBase">
+        <defName>FCP_Addiction_Psycho</defName>
+        <label>Psycho addiction</label>
+        <description>A chemical addiction to Psycho. Long-term presence of Psycho has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug. Without regular doses of Psycho, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
+        <hediffClass>Hediff_Addiction</hediffClass>
+        <chemicalNeed>FCP_Need_Psycho</chemicalNeed>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.0300</severityPerDay>
+                <showDaysToRecover>true</showDaysToRecover>
+            </li>
+        </comps>
+        <stages>
+            <li>
+            </li>
+            <li>
+                <label>withdrawal</label>
+                <socialFightChanceFactor>3.5</socialFightChanceFactor>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.25</offset>
+                    </li>
+                </capMods>
+                <mentalStateGivers>
+                    <li>
+                        <mentalState>Binging_DrugExtreme</mentalState>
+                        <mtbDays>35</mtbDays>
+                    </li>
+                    <li>
+                        <mentalState>Berserk</mentalState>
+                        <mtbDays>50</mtbDays>
+                    </li>
+                </mentalStateGivers>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThoughtDef>
+        <defName>FCP_Hediff_PsychoWithdrawal</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>FCP_Addiction_Psycho</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <visible>false</visible>
+            </li>
+            <li>
+                <label>Psycho withdrawal</label>
+                <description>I feel weak and vulnerable. Need Psycho to feel strong again!</description>
+                <baseMoodEffect>-40</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <HediffDef>
+        <defName>FCP_Hediff_PsychoHigh</defName>
+        <label>high on Psycho</label>
+        <labelNoun>a Psycho high</labelNoun>
+        <description>Enraged by Psycho. Damage output and resistance dramatically increased, but mental functions suppressed.</description>
+        <hediffClass>Hediff_High</hediffClass>
+        <defaultLabelColor>(1,0.2,0.2)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-3.5</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <painFactor>0.5</painFactor>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.10</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <IncomingDamageFactor>-0.25</IncomingDamageFactor>
+                    <MeleeDamageFactor>0.50</MeleeDamageFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--__________ Buffout __________-->
+
+    <ChemicalDef>
+        <defName>FCP_Chemical_Buffout</defName>
+        <label>Buffout</label>
+        <addictionHediff>FCP_Addiction_Buffout</addictionHediff>
+        <toleranceHediff>FCP_Hediff_BuffoutTolerance</toleranceHediff>
+        <onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
+        <geneToleranceBuildupFactorResist>0.5</geneToleranceBuildupFactorResist>
+        <geneToleranceBuildupFactorImmune>0</geneToleranceBuildupFactorImmune>
+    </ChemicalDef>
+
+    <NeedDef ParentName="DrugAddictionNeedBase">
+        <defName>FCP_Need_Buffout</defName>
+        <needClass>Need_Chemical</needClass>
+        <label>Buffout</label>
+        <description>Because of a Buffout addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+        <listPriority>43</listPriority>
+    </NeedDef>
+
+    <HediffDef ParentName="DrugToleranceBase">
+        <defName>FCP_Hediff_BuffoutTolerance</defName>
+        <label>Buffout tolerance</label>
+        <description>A built-up tolerance to Buffout. The more severe this tolerance is, the more Buffout it takes to get the same effect.</description>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.016</severityPerDay>
+            </li>
+            <li Class="HediffCompProperties_DrugEffectFactor">
+                <chemical>FCP_Chemical_Buffout</chemical>
+            </li>
+        </comps>
+        <hediffGivers>
+            <li Class="HediffGiver_RandomDrugEffect">
+                <hediff>ChemicalDamageModerate</hediff>
+                <severityToMtbDaysCurve>
+                    <points>
+                        <li>(0.45, 99999)</li>
+                        <li>(0.5, 200)</li>
+                        <li>(1, 160)</li>
+                    </points>
+                </severityToMtbDaysCurve>
+                <partsToAffect>
+                    <li>Kidney</li>
+                    <li>Liver</li>
+                </partsToAffect>
+            </li>
+        </hediffGivers>
+    </HediffDef>
+
+    <HediffDef ParentName="AddictionBase">
+        <defName>FCP_Addiction_Buffout</defName>
+        <label>Buffout addiction</label>
+        <description>A chemical addiction to Buffout. Long-term presence of Buffout has caused neurological and physiological adaptations, so the body can no longer function properly without the drug. Without regular doses of Buffout, withdrawal symptoms will begin. However, extended abstinence will force the body to adapt back to its normal state, resolving the addiction.</description>
+        <hediffClass>Hediff_Addiction</hediffClass>
+        <chemicalNeed>FCP_Need_Buffout</chemicalNeed>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.0333</severityPerDay>
+                <showDaysToRecover>true</showDaysToRecover>
+            </li>
+        </comps>
+        <stages>
+            <li>
+            </li>
+            <li>
+                <label>withdrawal</label>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>-0.30</offset>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>-0.40</offset>
+                    </li>
+                </capMods>
+                <mentalStateGivers>
+                    <li>
+                        <mentalState>Binging_DrugMajor</mentalState>
+                        <mtbDays>40</mtbDays>
+                    </li>
+                </mentalStateGivers>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThoughtDef>
+        <defName>FCP_Hediff_BuffoutWithdrawal</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>FCP_Addiction_Buffout</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <visible>false</visible>
+            </li>
+            <li>
+                <label>Buffout withdrawal</label>
+                <description>I feel so weak. My muscles ache. I need Buffout!</description>
+                <baseMoodEffect>-30</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <HediffDef>
+        <defName>FCP_Hediff_BuffoutHigh</defName>
+        <label>high on Buffout</label>
+        <labelNoun>a Buffout high</labelNoun>
+        <description>Enhanced by Buffout. Strength, carrying capacity, and melee damage significantly increased.</description>
+        <hediffClass>Hediff_High</hediffClass>
+        <defaultLabelColor>(0.8,0.3,0.8)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-3.2</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.15</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <CarryingCapacity>30</CarryingCapacity>
+                    <MeleeDamageFactor>0.30</MeleeDamageFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--__________ Mentats __________-->
+
+    <ChemicalDef>
+        <defName>FCP_Chemical_Mentats</defName>
+        <label>Mentats</label>
+        <addictionHediff>FCP_Addiction_Mentats</addictionHediff>
+        <toleranceHediff>FCP_Hediff_MentatsTolerance</toleranceHediff>
+        <onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
+        <geneToleranceBuildupFactorResist>0.5</geneToleranceBuildupFactorResist>
+        <geneToleranceBuildupFactorImmune>0</geneToleranceBuildupFactorImmune>
+    </ChemicalDef>
+
+    <NeedDef ParentName="DrugAddictionNeedBase">
+        <defName>FCP_Need_Mentats</defName>
+        <needClass>Need_Chemical</needClass>
+        <label>Mentats</label>
+        <description>Because of a Mentats dependence, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+        <listPriority>44</listPriority>
+    </NeedDef>
+
+    <HediffDef ParentName="DrugToleranceBase">
+        <defName>FCP_Hediff_MentatsTolerance</defName>
+        <label>Mentats tolerance</label>
+        <description>A built-up tolerance to Mentats. The more severe this tolerance is, the more Mentats it takes to get the same effect.</description>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.014</severityPerDay>
+            </li>
+            <li Class="HediffCompProperties_DrugEffectFactor">
+                <chemical>FCP_Chemical_Mentats</chemical>
+            </li>
+        </comps>
+        <hediffGivers>
+            <li Class="HediffGiver_RandomDrugEffect">
+                <hediff>ChemicalDamageModerate</hediff>
+                <severityToMtbDaysCurve>
+                    <points>
+                        <li>(0.45, 99999)</li>
+                        <li>(0.5, 220)</li>
+                        <li>(1, 180)</li>
+                    </points>
+                </severityToMtbDaysCurve>
+                <partsToAffect>
+                    <li>Brain</li>
+                </partsToAffect>
+            </li>
+        </hediffGivers>
+    </HediffDef>
+
+    <HediffDef ParentName="AddictionBase">
+        <defName>FCP_Addiction_Mentats</defName>
+        <label>Mentats addiction</label>
+        <description>A psychological addiction to Mentats. The brain has become dependent on the cognitive enhancement, and withdrawal causes severe mental fog and confusion.Without regular doses of Mentats, withdrawal symptoms will begin. However, extended abstinence will allow the brain to recover its natural function, resolving the addiction.</description>
+        <hediffClass>Hediff_Addiction</hediffClass>
+        <chemicalNeed>FCP_Need_Mentats</chemicalNeed>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.0400</severityPerDay>
+                <showDaysToRecover>true</showDaysToRecover>
+            </li>
+        </comps>
+        <stages>
+            <li>
+            </li>
+            <li>
+                <label>withdrawal</label>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.30</offset>
+                    </li>
+                </capMods>
+                <mentalStateGivers>
+                    <li>
+                        <mentalState>Binging_DrugMajor</mentalState>
+                        <mtbDays>50</mtbDays>
+                    </li>
+                </mentalStateGivers>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThoughtDef>
+        <defName>FCP_Hediff_MentatsWithdrawal</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>FCP_Addiction_Mentats</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <visible>false</visible>
+            </li>
+            <li>
+                <label>Mentats withdrawal</label>
+                <description>Can't think clearly. Everything's foggy. Need Mentats!</description>
+                <baseMoodEffect>-25</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <HediffDef>
+        <defName>FCP_Hediff_MentatsHigh</defName>
+        <label>high on Mentats</label>
+        <labelNoun>a Mentats high</labelNoun>
+        <description>Enhanced by Mentats. Intelligence, perception, and mental acuity significantly improved.</description>
+        <hediffClass>Hediff_High</hediffClass>
+        <defaultLabelColor>(0.3,0.8,1)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-2.8</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>0.15</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <ResearchSpeedFactor>0.30</ResearchSpeedFactor>
+                    <TradePriceImprovement>0.15</TradePriceImprovement>
+                    <NegotiationAbility>0.25</NegotiationAbility>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--__________ Slasher __________-->
+
+    <ChemicalDef>
+        <defName>FCP_Chemical_Slasher</defName>
+        <label>Slasher</label>
+        <addictionHediff>FCP_Addiction_Slasher</addictionHediff>
+        <toleranceHediff>FCP_Hediff_SlasherTolerance</toleranceHediff>
+        <onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
+        <geneToleranceBuildupFactorResist>0.5</geneToleranceBuildupFactorResist>
+        <geneToleranceBuildupFactorImmune>0</geneToleranceBuildupFactorImmune>
+    </ChemicalDef>
+
+    <NeedDef ParentName="DrugAddictionNeedBase">
+        <defName>FCP_Need_Slasher</defName>
+        <needClass>Need_Chemical</needClass>
+        <label>Slasher</label>
+        <description>Because of a Slasher addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+        <listPriority>41</listPriority>
+    </NeedDef>
+
+    <HediffDef ParentName="DrugToleranceBase">
+        <defName>FCP_Hediff_SlasherTolerance</defName>
+        <label>Slasher tolerance</label>
+        <description>A built-up tolerance to Slasher. The more severe this tolerance is, the more Slasher it takes to get the same effect.</description>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.017</severityPerDay>
+            </li>
+            <li Class="HediffCompProperties_DrugEffectFactor">
+                <chemical>FCP_Chemical_Slasher</chemical>
+            </li>
+        </comps>
+        <hediffGivers>
+            <li Class="HediffGiver_RandomDrugEffect">
+                <hediff>ChemicalDamageSevere</hediff>
+                <severityToMtbDaysCurve>
+                    <points>
+                        <li>(0.45, 99999)</li>
+                        <li>(0.5, 140)</li>
+                        <li>(1, 110)</li>
+                    </points>
+                </severityToMtbDaysCurve>
+                <partsToAffect>
+                    <li>Brain</li>
+                </partsToAffect>
+            </li>
+        </hediffGivers>
+    </HediffDef>
+
+    <HediffDef ParentName="AddictionBase">
+        <defName>FCP_Addiction_Slasher</defName>
+        <label>Slasher addiction</label>
+        <description>A chemical addiction to Slasher. Long-term presence of Slasher has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug. Without regular doses of Slasher, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
+        <hediffClass>Hediff_Addiction</hediffClass>
+        <chemicalNeed>FCP_Need_Slasher</chemicalNeed>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.0285</severityPerDay>
+                <showDaysToRecover>true</showDaysToRecover>
+            </li>
+        </comps>
+        <stages>
+            <li>
+            </li>
+            <li>
+                <label>withdrawal</label>
+                <socialFightChanceFactor>2.5</socialFightChanceFactor>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.20</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <MeleeDamageFactor>-0.30</MeleeDamageFactor>
+                </statOffsets>
+                <mentalStateGivers>
+                    <li>
+                        <mentalState>Binging_DrugExtreme</mentalState>
+                        <mtbDays>35</mtbDays>
+                    </li>
+                </mentalStateGivers>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <ThoughtDef>
+        <defName>FCP_Hediff_SlasherWithdrawal</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>FCP_Addiction_Slasher</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <visible>false</visible>
+            </li>
+            <li>
+                <label>Slasher withdrawal</label>
+                <description>Feel useless in combat without Slasher. Need to feel that edge again!</description>
+                <baseMoodEffect>-35</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <HediffDef>
+        <defName>FCP_Hediff_SlasherHigh</defName>
+        <label>high on Slasher</label>
+        <labelNoun>a Slasher high</labelNoun>
+        <description>Enhanced by Slasher. Melee damage dramatically increased, pain reduced.</description>
+        <hediffClass>Hediff_High</hediffClass>
+        <defaultLabelColor>(0.9,0.1,0.4)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-3.0</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <painFactor>0.6</painFactor>
+                <statOffsets>
+                    <MeleeDamageFactor>0.60</MeleeDamageFactor>
+                    <MeleeHitChance>5</MeleeHitChance>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--__________ Non-Addictive Drugs __________-->
+
+    <HediffDef>
+        <defName>FCP_Hediff_TurboHigh</defName>
+        <label>high on Turbo</label>
+        <labelNoun>a Turbo high</labelNoun>
+        <description>Supercharged by Turbo. Perception and reflexes dramatically enhanced, movement and shooting significantly improved.</description>
+        <hediffClass>Hediff_High</hediffClass>
+        <defaultLabelColor>(1,0.9,0.2)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-12.0</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.50</offset>
+                    </li>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>0.30</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <ShootingAccuracyPawn>10</ShootingAccuracyPawn>
+                    <MeleeHitChance>12</MeleeHitChance>
+                    <AimingDelayFactor>-0.50</AimingDelayFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>FCP_Hediff_SteadyHigh</defName>
+        <label>steadied</label>
+        <labelNoun>steady effect</labelNoun>
+        <description>Stabilized by Steady. Shooting accuracy and manipulation significantly improved.</description>
+        <hediffClass>Hediff_High</hediffClass>
+        <defaultLabelColor>(0.4,0.7,1)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-2.5</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>0.20</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <ShootingAccuracyPawn>8</ShootingAccuracyPawn>
+                    <AimingDelayFactor>-0.25</AimingDelayFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>FCP_Hediff_CateyeHigh</defName>
+        <label>cateye vision</label>
+        <labelNoun>cateye effect</labelNoun>
+        <description>Enhanced by Cateye. Vision significantly improved, especially in low light conditions.</description>
+        <hediffClass>Hediff_High</hediffClass>
+        <defaultLabelColor>(0.5,1,0.3)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-2.2</severityPerDay>
+                <showHoursToRecover>true</showHoursToRecover>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ShootingAccuracyPawn>6</ShootingAccuracyPawn>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>FCP_Hediff_AddictolRecovery</defName>
+        <label>Addictol treatment</label>
+        <labelNoun>Addictol treatment</labelNoun>
+        <description>Undergoing addiction treatment from Addictol. Feeling exhausted but addictions are being purged.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.6,1,0.6)</defaultLabelColor>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>2500</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.15</offset>
+                    </li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>-0.20</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <HediffDef>
+        <defName>FCP_Hediff_FixerRecovery</defName>
+        <label>Fixer treatment</label>
+        <labelNoun>Fixer treatment</labelNoun>
+        <description>Undergoing addiction treatment from Fixer. Feeling fatigued but withdrawal symptoms are reduced.</description>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.6,0.9,0.6)</defaultLabelColor>
+        <scenarioCanAdd>false</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>5000</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.10</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--__________ Ultrajet __________-->
+
+    <!-- Ultrajet Chemical -->
+
+    <ChemicalDef>
+        <defName>FCP_Chemical_Ultrajet</defName>
+        <label>Ultrajet</label>
+        <addictionHediff>FCP_Addiction_Ultrajet</addictionHediff>
+        <toleranceHediff>FCP_Hediff_UltrajetTolerance</toleranceHediff>
+        <onGeneratedAddictedToleranceChance>0.8</onGeneratedAddictedToleranceChance>
+        <onGeneratedAddictedEvents>
+            <li>
+                <hediff>ChemicalDamageModerate</hediff>
+                <chance>0.5</chance>
+                <partsToAffect>
+                    <li>Brain</li>
+                </partsToAffect>
+            </li>
+        </onGeneratedAddictedEvents>
+        <geneToleranceBuildupFactorResist>0.5</geneToleranceBuildupFactorResist>
+        <geneToleranceBuildupFactorImmune>0</geneToleranceBuildupFactorImmune>
+    </ChemicalDef>
+
+    <!-- Ultrajet Need -->
+
+    <NeedDef ParentName="DrugAddictionNeedBase">
+        <defName>FCP_Need_Ultrajet</defName>
+        <needClass>Need_Chemical</needClass>
+        <label>Ultrajet</label>
+        <description>Because of an Ultrajet addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+        <listPriority>45</listPriority>
+    </NeedDef>
+
+    <!-- Ultrajet Tolerance -->
+
+    <HediffDef ParentName="DrugToleranceBase">
+        <defName>FCP_Hediff_UltrajetTolerance</defName>
+        <label>Ultrajet tolerance</label>
+        <description>A built-up tolerance to Ultrajet. The more severe this tolerance is, the more Ultrajet it takes to get the same effect.</description>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.020</severityPerDay>
+            </li>
+            <li Class="HediffCompProperties_DrugEffectFactor">
+                <chemical>FCP_Chemical_Ultrajet</chemical>
+            </li>
+        </comps>
+        <hediffGivers>
+            <li Class="HediffGiver_RandomDrugEffect">
+                <hediff>ChemicalDamageModerate</hediff>
+                <minSeverity>0.60</minSeverity>
+                <baseMtbDays>180</baseMtbDays>
+                <partsToAffect>
+                    <li>Brain</li>
+                </partsToAffect>
+            </li>
+        </hediffGivers>
+    </HediffDef>
+
+    <!-- Ultrajet Addiction -->
+
+    <HediffDef ParentName="AddictionBase">
+        <defName>FCP_Addiction_Ultrajet</defName>
+        <label>Ultrajet addiction</label>
+        <description>A chemical addiction to Ultrajet. Long-term presence of Ultrajet has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.\n\nWithout regular doses of Ultrajet, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
+        <hediffClass>Hediff_Addiction</hediffClass>
+        <chemicalNeed>FCP_Need_Ultrajet</chemicalNeed>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.0400</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+            </li>
+            <li>
+                <label>withdrawal</label>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.35</offset>
+                    </li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>-0.50</offset>
+                    </li>
+                </capMods>
+                <mentalStateGivers>
+                    <li>
+                        <mentalState>Binging_DrugExtreme</mentalState>
+                        <mtbDays>15</mtbDays>
+                    </li>
+                    <li>
+                        <mentalState>Wander_Psychotic</mentalState>
+                        <mtbDays>10</mtbDays>
+                    </li>
+                </mentalStateGivers>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- Ultrajet Thought -->
+
+    <ThoughtDef>
+        <defName>FCP_Hediff_UltrajetWithdrawal</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>FCP_Addiction_Ultrajet</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <visible>false</visible>
+            </li>
+            <li>
+                <label>Ultrajet withdrawal</label>
+                <description>Everything feels wrong without Ultrajet. I need it!</description>
+                <baseMoodEffect>-45</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <!-- Ultrajet High -->
+
+    <HediffDef>
+        <defName>FCP_Hediff_UltrajetHigh</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <label>high on Ultrajet</label>
+        <labelNoun>an Ultrajet high</labelNoun>
+        <description>Extreme combat enhancement from combined Jet and Psycho effects. Speed and damage greatly increased, but with severe after-effects.</description>
+        <defaultLabelColor>(1,0,0.5)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-3.0</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.05</offset>
+                    </li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.45</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <MeleeDamageFactor>0.55</MeleeDamageFactor>
+                    <IncomingDamageFactor>-0.20</IncomingDamageFactor>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--__________ Rocket __________-->
+
+    <!-- Rocket High -->
+
+    <HediffDef>
+        <defName>FCP_Hediff_RocketHigh</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <label>high on Rocket</label>
+        <labelNoun>a Rocket high</labelNoun>
+        <description>Enhanced speed and stamina from Rocket's unique stimulant combination.</description>
+        <defaultLabelColor>(1,0.4,0.2)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-4.0</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.40</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <WorkSpeedGlobal>0.25</WorkSpeedGlobal>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--__________ Berry Mentats __________-->
+
+    <!-- Berry Mentats High -->
+
+    <HediffDef>
+        <defName>FCP_Hediff_BerryMentatsHigh</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <label>high on Berry Mentats</label>
+        <labelNoun>a Berry Mentats high</labelNoun>
+        <description>Enhanced charisma and social skills from Berry Mentats.</description>
+        <defaultLabelColor>(0.8,0.2,0.8)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-3.0</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <statOffsets>
+                    <NegotiationAbility>0.35</NegotiationAbility>
+                    <SocialImpact>0.30</SocialImpact>
+                    <TradePriceImprovement>0.15</TradePriceImprovement>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--__________ Grape Mentats __________-->
+
+    <!-- Grape Mentats High -->
+
+    <HediffDef>
+        <defName>FCP_Hediff_GrapeMentatsHigh</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <label>high on Grape Mentats</label>
+        <labelNoun>a Grape Mentats high</labelNoun>
+        <description>Balanced enhancement of intelligence and charisma from Grape Mentats.</description>
+        <defaultLabelColor>(0.6,0.2,0.8)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-3.0</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ResearchSpeedFactor>0.20</ResearchSpeedFactor>
+                    <NegotiationAbility>0.20</NegotiationAbility>
+                    <SocialImpact>0.20</SocialImpact>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--__________ Orange Mentats __________-->
+
+    <!-- Orange Mentats High -->
+
+    <HediffDef>
+        <defName>FCP_Hediff_OrangeMentatsHigh</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <label>high on Orange Mentats</label>
+        <labelNoun>an Orange Mentats high</labelNoun>
+        <description>Enhanced perception and accuracy from Orange Mentats.</description>
+        <defaultLabelColor>(1,0.6,0.2)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-3.0</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ShootingAccuracyPawn>10</ShootingAccuracyPawn>
+                    <MeleeHitChance>5</MeleeHitChance>
+                </statOffsets>
+                <capMods>
+                    <li>
+                        <capacity>Sight</capacity>
+                        <offset>0.20</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--__________ Party Time Mentats __________-->
+
+    <!-- Party Time Mentats High -->
+
+    <HediffDef>
+        <defName>FCP_Hediff_PartyTimeMentatsHigh</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <label>high on Party Time Mentats</label>
+        <labelNoun>a Party Time Mentats high</labelNoun>
+        <description>Pleasant social enhancement from Party Time Mentats.</description>
+        <defaultLabelColor>(1,0.4,0.8)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-3.0</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <statOffsets>
+                    <NegotiationAbility>0.25</NegotiationAbility>
+                    <SocialImpact>0.35</SocialImpact>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--__________ Day Tripper __________-->
+
+    <!-- Day Tripper Chemical -->
+
+    <ChemicalDef>
+        <defName>FCP_Chemical_DayTripper</defName>
+        <label>Day Tripper</label>
+        <addictionHediff>FCP_Addiction_DayTripper</addictionHediff>
+        <toleranceHediff>FCP_Hediff_DayTripperTolerance</toleranceHediff>
+        <onGeneratedAddictedToleranceChance>0.6</onGeneratedAddictedToleranceChance>
+        <geneToleranceBuildupFactorResist>0.5</geneToleranceBuildupFactorResist>
+        <geneToleranceBuildupFactorImmune>0</geneToleranceBuildupFactorImmune>
+    </ChemicalDef>
+
+    <!-- Day Tripper Need -->
+
+    <NeedDef ParentName="DrugAddictionNeedBase">
+        <defName>FCP_Need_DayTripper</defName>
+        <needClass>Need_Chemical</needClass>
+        <label>Day Tripper</label>
+        <description>Because of a Day Tripper addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+        <listPriority>40</listPriority>
+    </NeedDef>
+
+    <!-- Day Tripper Tolerance -->
+
+    <HediffDef ParentName="DrugToleranceBase">
+        <defName>FCP_Hediff_DayTripperTolerance</defName>
+        <label>Day Tripper tolerance</label>
+        <description>A built-up tolerance to Day Tripper. The more severe this tolerance is, the more Day Tripper it takes to get the same effect.</description>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.012</severityPerDay>
+            </li>
+            <li Class="HediffCompProperties_DrugEffectFactor">
+                <chemical>FCP_Chemical_DayTripper</chemical>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <!-- Day Tripper Addiction -->
+
+    <HediffDef ParentName="AddictionBase">
+        <defName>FCP_Addiction_DayTripper</defName>
+        <label>Day Tripper addiction</label>
+        <description>A chemical addiction to Day Tripper. Long-term presence of Day Tripper has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.\n\nWithout regular doses of Day Tripper, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
+        <hediffClass>Hediff_Addiction</hediffClass>
+        <chemicalNeed>FCP_Need_DayTripper</chemicalNeed>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.0286</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+            </li>
+            <li>
+                <label>withdrawal</label>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.10</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- Day Tripper Thought -->
+
+    <ThoughtDef>
+        <defName>FCP_Hediff_DayTripperWithdrawal</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>FCP_Addiction_DayTripper</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <visible>false</visible>
+            </li>
+            <li>
+                <label>Day Tripper withdrawal</label>
+                <description>I feel so dull without Day Tripper.</description>
+                <baseMoodEffect>-20</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <!-- Day Tripper High -->
+
+    <HediffDef>
+        <defName>FCP_Hediff_DayTripperHigh</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <label>high on Day Tripper</label>
+        <labelNoun>a Day Tripper high</labelNoun>
+        <description>Enhanced mood and charisma from Day Tripper.</description>
+        <defaultLabelColor>(1,0.8,0.4)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-2.4</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <statOffsets>
+                    <NegotiationAbility>0.25</NegotiationAbility>
+                    <SocialImpact>0.25</SocialImpact>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--__________ X-Cell __________-->
+
+    <!-- X-Cell High -->
+
+    <HediffDef>
+        <defName>FCP_Hediff_XCellHigh</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <label>high on X-Cell</label>
+        <labelNoun>an X-Cell high</labelNoun>
+        <description>Comprehensive enhancement of all capabilities from X-Cell.</description>
+        <defaultLabelColor>(0.2,1,1)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-6.0</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>0.15</offset>
+                    </li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.25</offset>
+                    </li>
+                    <li>
+                        <capacity>Sight</capacity>
+                        <offset>0.20</offset>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>0.15</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <MeleeDamageFactor>0.30</MeleeDamageFactor>
+                    <ResearchSpeedFactor>0.25</ResearchSpeedFactor>
+                    <NegotiationAbility>0.25</NegotiationAbility>
+                    <ShootingAccuracyPawn>8</ShootingAccuracyPawn>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--__________ Daddy-O __________-->
+
+    <!-- Daddy-O Chemical -->
+
+    <ChemicalDef>
+        <defName>FCP_Chemical_DaddyO</defName>
+        <label>Daddy-O</label>
+        <addictionHediff>FCP_Addiction_DaddyO</addictionHediff>
+        <toleranceHediff>FCP_Hediff_DaddyOTolerance</toleranceHediff>
+        <onGeneratedAddictedToleranceChance>0.5</onGeneratedAddictedToleranceChance>
+        <geneToleranceBuildupFactorResist>0.5</geneToleranceBuildupFactorResist>
+        <geneToleranceBuildupFactorImmune>0</geneToleranceBuildupFactorImmune>
+    </ChemicalDef>
+
+    <!-- Daddy-O Need -->
+
+    <NeedDef ParentName="DrugAddictionNeedBase">
+        <defName>FCP_Need_DaddyO</defName>
+        <needClass>Need_Chemical</needClass>
+        <label>Daddy-O</label>
+        <description>Because of a Daddy-O addiction, this person needs to regularly consume the drug to avoid withdrawal symptoms.</description>
+        <listPriority>38</listPriority>
+    </NeedDef>
+
+    <!-- Daddy-O Tolerance -->
+
+    <HediffDef ParentName="DrugToleranceBase">
+        <defName>FCP_Hediff_DaddyOTolerance</defName>
+        <label>Daddy-O tolerance</label>
+        <description>A built-up tolerance to Daddy-O. The more severe this tolerance is, the more Daddy-O it takes to get the same effect.</description>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.012</severityPerDay>
+            </li>
+            <li Class="HediffCompProperties_DrugEffectFactor">
+                <chemical>FCP_Chemical_DaddyO</chemical>
+            </li>
+        </comps>
+    </HediffDef>
+
+    <!-- Daddy-O Addiction -->
+
+    <HediffDef ParentName="AddictionBase">
+        <defName>FCP_Addiction_DaddyO</defName>
+        <label>Daddy-O addiction</label>
+        <description>A chemical addiction to Daddy-O. Long-term presence of Daddy-O has caused neurological adaptations at the cellular level, so the brain can no longer function properly without the drug.\n\nWithout regular doses of Daddy-O, withdrawal symptoms will begin. However, extended abstinence will force the brain to adapt back to its normal state, resolving the addiction.</description>
+        <hediffClass>Hediff_Addiction</hediffClass>
+        <chemicalNeed>FCP_Need_DaddyO</chemicalNeed>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-0.0286</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+            </li>
+            <li>
+                <label>withdrawal</label>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.15</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!-- Daddy-O Thought -->
+
+    <ThoughtDef>
+        <defName>FCP_Hediff_DaddyOWithdrawal</defName>
+        <workerClass>ThoughtWorker_Hediff</workerClass>
+        <hediff>FCP_Addiction_DaddyO</hediff>
+        <validWhileDespawned>true</validWhileDespawned>
+        <developmentalStageFilter>Baby, Child, Adult</developmentalStageFilter>
+        <stages>
+            <li>
+                <visible>false</visible>
+            </li>
+            <li>
+                <label>Daddy-O withdrawal</label>
+                <description>My mind feels foggy without Daddy-O.</description>
+                <baseMoodEffect>-18</baseMoodEffect>
+            </li>
+        </stages>
+    </ThoughtDef>
+
+    <!-- Daddy-O High -->
+
+    <HediffDef>
+        <defName>FCP_Hediff_DaddyOHigh</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <label>high on Daddy-O</label>
+        <labelNoun>a Daddy-O high</labelNoun>
+        <description>Enhanced intelligence and perception but reduced social skills from Daddy-O.</description>
+        <defaultLabelColor>(0.6,0.4,0.2)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-2.4</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <statOffsets>
+                    <ResearchSpeedFactor>0.30</ResearchSpeedFactor>
+                    <ShootingAccuracyPawn>6</ShootingAccuracyPawn>
+                    <NegotiationAbility>-0.20</NegotiationAbility>
+                </statOffsets>
+                <capMods>
+                    <li>
+                        <capacity>Sight</capacity>
+                        <offset>0.15</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--__________ Atomic Cocktail __________-->
+
+    <!-- Atomic Cocktail High -->
+
+    <HediffDef>
+        <defName>FCP_Hediff_AtomicCocktailHigh</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <label>fortified by Atomic Cocktail</label>
+        <labelNoun>Atomic Cocktail fortification</labelNoun>
+        <description>Enhanced radiation resistance and physical strength from the Atomic Cocktail.</description>
+        <defaultLabelColor>(0.2,1,0.2)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-1.2</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <statOffsets>
+                    <CarryingCapacity>25</CarryingCapacity>
+                    <MeleeDamageFactor>0.20</MeleeDamageFactor>
+                    <ToxicEnvironmentResistance>0.50</ToxicEnvironmentResistance>
+                </statOffsets>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--__________ Rebound __________-->
+
+    <!-- Rebound Recovery Effect -->
+
+    <HediffDef>
+        <defName>FCP_Hediff_ReboundRecovery</defName>
+        <hediffClass>Hediff_High</hediffClass>
+        <label>Rebound recovery</label>
+        <labelNoun>Rebound treatment</labelNoun>
+        <description>Undergoing anti-addiction therapy with Rebound. This medication helps reduce withdrawal symptoms and combat chemical dependencies, though less powerfully than Addictol.</description>
+        <defaultLabelColor>(0.6,0.8,1.0)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-3.0</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>-0.10</offset>
+                    </li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>-0.10</offset>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+    <!--__________ Dixon's Jet __________-->
+
+    <!-- Dixon's Jet High -->
+
+    <HediffDef>
+        <defName>FCP_Hediff_DixonsJetHigh</defName>
+        <hediffClass>Hediff_High</hediffClass>
+        <label>Dixon's Jet high</label>
+        <labelNoun>a Dixon's Jet high</labelNoun>
+        <description>Under the effects of Dixon's Jet, a premium refined variant. The purer formula provides stronger and longer-lasting speed enhancement with reduced side effects.</description>
+        <defaultLabelColor>(1,0.5,0)</defaultLabelColor>
+        <scenarioCanAdd>true</scenarioCanAdd>
+        <maxSeverity>1.0</maxSeverity>
+        <isBad>false</isBad>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>-20</severityPerDay>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <offset>0.30</offset>
+                    </li>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>0.40</offset>
+                    </li>
+                </capMods>
+                <statOffsets>
+                    <WorkSpeedGlobal>0.60</WorkSpeedGlobal>
+                    <MeleeHitChance>4</MeleeHitChance>
+                    <ShootingAccuracyPawn>4</ShootingAccuracyPawn>
                 </statOffsets>
             </li>
         </stages>

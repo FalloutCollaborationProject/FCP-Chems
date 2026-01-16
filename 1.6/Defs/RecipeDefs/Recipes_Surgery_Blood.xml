@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!-- Blood Extraction Surgery -->
+
+    <RecipeDef>
+        <defName>FCP_Extract_Blood</defName>
+        <label>extract blood</label>
+        <description>Extract blood from a living person to create blood packs for transfusions. The donor will experience temporary blood loss and weakness.</description>
+        <workerClass>Recipe_Surgery</workerClass>
+        <jobString>Extracting blood.</jobString>
+        <workAmount>2500</workAmount>
+        <surgerySuccessChanceFactor>0.95</surgerySuccessChanceFactor>
+        <deathOnFailedSurgeryChance>0.01</deathOnFailedSurgeryChance>
+        <targetsBodyPart>false</targetsBodyPart>
+        <anesthetize>true</anesthetize>
+        <appliedOnFixedBodyParts>
+            <li>Torso</li>
+        </appliedOnFixedBodyParts>
+        <ingredients>
+            <li>
+                <filter>
+                    <categories>
+                        <li>Medicine</li>
+                    </categories>
+                </filter>
+                <count>1</count>
+            </li>
+        </ingredients>
+        <fixedIngredientFilter>
+            <categories>
+                <li>Medicine</li>
+            </categories>
+        </fixedIngredientFilter>
+        <products>
+            <FCP_Chem_Blood_Pack>1</FCP_Chem_Blood_Pack>
+        </products>
+        <addsHediff>BloodLoss</addsHediff>
+        <researchPrerequisite>FCP_Research_Medicinal_Drugs</researchPrerequisite>
+    </RecipeDef>
+
+</Defs>
