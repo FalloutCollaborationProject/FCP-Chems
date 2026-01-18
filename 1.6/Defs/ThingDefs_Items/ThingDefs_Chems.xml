@@ -421,7 +421,7 @@
         <recipeMaker>
             <researchPrerequisite>FCP_Research_RadX_Production</researchPrerequisite>
             <recipeUsers>
-                <li>DrugLab</li>
+                <li>FCP_Production_Chemistry_Workbench</li>
             </recipeUsers>
             <soundWorking>Recipe_Drug</soundWorking>
         </recipeMaker>
@@ -549,7 +549,7 @@
         <recipeMaker>
             <researchPrerequisite>FCP_Research_Healing_Powder</researchPrerequisite>
             <recipeUsers>
-                <li>DrugLab</li>
+                <li>FCP_Production_Chemistry_Workbench</li>
                 <li>CraftingSpot</li>
             </recipeUsers>
             <soundWorking>Recipe_Drug</soundWorking>
@@ -614,7 +614,7 @@
         <recipeMaker>
             <researchPrerequisite>FCP_Research_MedX_Production</researchPrerequisite>
             <recipeUsers>
-                <li>DrugLab</li>
+                <li>FCP_Production_Chemistry_Workbench</li>
             </recipeUsers>
             <soundWorking>Recipe_Drug</soundWorking>
         </recipeMaker>
@@ -678,7 +678,7 @@
         <recipeMaker>
             <researchPrerequisite>FCP_Research_Medicinal_Drugs</researchPrerequisite>
             <recipeUsers>
-                <li>DrugLab</li>
+                <li>FCP_Production_Chemistry_Workbench</li>
             </recipeUsers>
             <soundWorking>Recipe_Drug</soundWorking>
         </recipeMaker>
@@ -742,7 +742,7 @@
         <recipeMaker>
             <researchPrerequisite>FCP_Research_Medicinal_Drugs</researchPrerequisite>
             <recipeUsers>
-                <li>DrugLab</li>
+                <li>FCP_Production_Chemistry_Workbench</li>
             </recipeUsers>
             <soundWorking>Recipe_Drug</soundWorking>
         </recipeMaker>
@@ -859,7 +859,7 @@
         <recipeMaker>
             <researchPrerequisite>FCP_Research_Jet_Production</researchPrerequisite>
             <recipeUsers>
-                <li>DrugLab</li>
+                <li>FCP_Production_Chemistry_Workbench</li>
             </recipeUsers>
             <soundWorking>Recipe_Drug</soundWorking>
         </recipeMaker>
@@ -926,7 +926,7 @@
         <recipeMaker>
             <researchPrerequisite>FCP_Research_Psycho_Production</researchPrerequisite>
             <recipeUsers>
-                <li>DrugLab</li>
+                <li>FCP_Production_Chemistry_Workbench</li>
             </recipeUsers>
             <soundWorking>Recipe_Drug</soundWorking>
         </recipeMaker>
@@ -993,7 +993,7 @@
         <recipeMaker>
             <researchPrerequisite>FCP_Research_Buffout_Production</researchPrerequisite>
             <recipeUsers>
-                <li>DrugLab</li>
+                <li>FCP_Production_Chemistry_Workbench</li>
             </recipeUsers>
             <soundWorking>Recipe_Drug</soundWorking>
         </recipeMaker>
@@ -1059,7 +1059,7 @@
         <recipeMaker>
             <researchPrerequisite>FCP_Research_Mentat_Production</researchPrerequisite>
             <recipeUsers>
-                <li>DrugLab</li>
+                <li>FCP_Production_Chemistry_Workbench</li>
             </recipeUsers>
             <soundWorking>Recipe_Drug</soundWorking>
         </recipeMaker>
@@ -1126,7 +1126,7 @@
         <recipeMaker>
             <researchPrerequisite>FCP_Research_Chem_Combinations</researchPrerequisite>
             <recipeUsers>
-                <li>DrugLab</li>
+                <li>FCP_Production_Chemistry_Workbench</li>
             </recipeUsers>
             <soundWorking>Recipe_Drug</soundWorking>
         </recipeMaker>
@@ -1192,7 +1192,7 @@
         <recipeMaker>
             <researchPrerequisite>FCP_Research_Chem_Combinations</researchPrerequisite>
             <recipeUsers>
-                <li>DrugLab</li>
+                <li>FCP_Production_Chemistry_Workbench</li>
             </recipeUsers>
             <soundWorking>Recipe_Drug</soundWorking>
         </recipeMaker>
@@ -1259,7 +1259,7 @@
         <recipeMaker>
             <researchPrerequisite>FCP_Research_Chem_Production</researchPrerequisite>
             <recipeUsers>
-                <li>DrugLab</li>
+                <li>FCP_Production_Chemistry_Workbench</li>
             </recipeUsers>
             <soundWorking>Recipe_Drug</soundWorking>
         </recipeMaker>
@@ -1323,7 +1323,7 @@
         <recipeMaker>
             <researchPrerequisite>FCP_Research_Chem_Production</researchPrerequisite>
             <recipeUsers>
-                <li>DrugLab</li>
+                <li>FCP_Production_Chemistry_Workbench</li>
             </recipeUsers>
             <soundWorking>Recipe_Drug</soundWorking>
         </recipeMaker>
@@ -1387,7 +1387,7 @@
         <recipeMaker>
             <researchPrerequisite>FCP_Research_Chem_Combinations</researchPrerequisite>
             <recipeUsers>
-                <li>DrugLab</li>
+                <li>FCP_Production_Chemistry_Workbench</li>
             </recipeUsers>
             <soundWorking>Recipe_Drug</soundWorking>
         </recipeMaker>
@@ -1451,7 +1451,7 @@
         <recipeMaker>
             <researchPrerequisite>FCP_Research_Medicinal_Drugs</researchPrerequisite>
             <recipeUsers>
-                <li>DrugLab</li>
+                <li>FCP_Production_Chemistry_Workbench</li>
             </recipeUsers>
             <soundWorking>Recipe_Drug</soundWorking>
         </recipeMaker>
@@ -1516,7 +1516,7 @@
         <recipeMaker>
             <researchPrerequisite>FCP_Research_Chem_Combinations</researchPrerequisite>
             <recipeUsers>
-                <li>DrugLab</li>
+                <li>FCP_Production_Chemistry_Workbench</li>
             </recipeUsers>
             <soundWorking>Recipe_Drug</soundWorking>
         </recipeMaker>
@@ -1584,7 +1584,7 @@
         <recipeMaker>
             <researchPrerequisite>FCP_Research_Chem_Combinations</researchPrerequisite>
             <recipeUsers>
-                <li>DrugLab</li>
+                <li>FCP_Production_Chemistry_Workbench</li>
             </recipeUsers>
             <soundWorking>Recipe_Drug</soundWorking>
         </recipeMaker>
@@ -1651,7 +1651,7 @@
         <recipeMaker>
             <researchPrerequisite>FCP_Research_Chem_Combinations</researchPrerequisite>
             <recipeUsers>
-                <li>DrugLab</li>
+                <li>FCP_Production_Chemistry_Workbench</li>
             </recipeUsers>
             <soundWorking>Recipe_Drug</soundWorking>
         </recipeMaker>
@@ -1718,7 +1718,7 @@
         <recipeMaker>
             <researchPrerequisite>FCP_Research_Chem_Combinations</researchPrerequisite>
             <recipeUsers>
-                <li>DrugLab</li>
+                <li>FCP_Production_Chemistry_Workbench</li>
             </recipeUsers>
             <soundWorking>Recipe_Drug</soundWorking>
         </recipeMaker>
@@ -1785,7 +1785,7 @@
         <recipeMaker>
             <researchPrerequisite>FCP_Research_Chem_Combinations</researchPrerequisite>
             <recipeUsers>
-                <li>DrugLab</li>
+                <li>FCP_Production_Chemistry_Workbench</li>
             </recipeUsers>
             <soundWorking>Recipe_Drug</soundWorking>
         </recipeMaker>
@@ -1852,7 +1852,7 @@
         <recipeMaker>
             <researchPrerequisite>FCP_Research_Chem_Combinations</researchPrerequisite>
             <recipeUsers>
-                <li>DrugLab</li>
+                <li>FCP_Production_Chemistry_Workbench</li>
             </recipeUsers>
             <soundWorking>Recipe_Drug</soundWorking>
         </recipeMaker>
@@ -1919,7 +1919,7 @@
         <recipeMaker>
             <researchPrerequisite>FCP_Research_Chem_Production</researchPrerequisite>
             <recipeUsers>
-                <li>DrugLab</li>
+                <li>FCP_Production_Chemistry_Workbench</li>
             </recipeUsers>
             <soundWorking>Recipe_Drug</soundWorking>
         </recipeMaker>
@@ -1985,7 +1985,7 @@
         <recipeMaker>
             <researchPrerequisite>FCP_Research_Chem_Combinations</researchPrerequisite>
             <recipeUsers>
-                <li>DrugLab</li>
+                <li>FCP_Production_Chemistry_Workbench</li>
             </recipeUsers>
             <soundWorking>Recipe_Drug</soundWorking>
         </recipeMaker>
@@ -2050,7 +2050,7 @@
         <recipeMaker>
             <researchPrerequisite>FCP_Research_Chem_Production</researchPrerequisite>
             <recipeUsers>
-                <li>DrugLab</li>
+                <li>FCP_Production_Chemistry_Workbench</li>
             </recipeUsers>
             <soundWorking>Recipe_Drug</soundWorking>
         </recipeMaker>
@@ -2117,7 +2117,7 @@
         <recipeMaker>
             <researchPrerequisite>FCP_Research_Medicinal_Drugs</researchPrerequisite>
             <recipeUsers>
-                <li>DrugLab</li>
+                <li>FCP_Production_Chemistry_Workbench</li>
             </recipeUsers>
             <soundWorking>Recipe_Drug</soundWorking>
         </recipeMaker>
@@ -2182,7 +2182,7 @@
         <recipeMaker>
             <researchPrerequisite>FCP_Research_Chem_Combinations</researchPrerequisite>
             <recipeUsers>
-                <li>DrugLab</li>
+                <li>FCP_Production_Chemistry_Workbench</li>
             </recipeUsers>
             <soundWorking>Recipe_Drug</soundWorking>
         </recipeMaker>
