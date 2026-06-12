@@ -5,7 +5,7 @@
 
     <!-- Diluted Stimpak -->
 
-    <ThingDef ParentName="FCP_Makeable_Drug_Base">
+    <ThingDef ParentName="FCP_Makeable_Medicine_Base">
         <defName>FCP_Chem_Diluted_Stimpak</defName>
         <label>diluted stimpak</label>
         <description>A watered-down stimulation delivery system that provides minor healing over time. Common among wasteland scavengers due to its lower cost and availability.</description>
@@ -15,6 +15,7 @@
         <graphicData>
             <texPath>Chems/Stimpaks/Diluted_Stimpak/FCP_Diluted_Stimpak</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -62,7 +63,7 @@
 
     <!-- Standard Stimpak -->
 
-    <ThingDef ParentName="FCP_Makeable_Drug_Base">
+    <ThingDef ParentName="FCP_Makeable_Medicine_Base">
         <defName>FCP_Chem_Stimpak</defName>
         <label>stimpak</label>
         <description>A standard stimulation delivery system for healing injuries. The most common medical item in the wasteland, stimpaks use a combination of healing agents and bio-regenerative compounds to rapidly mend wounds.</description>
@@ -72,6 +73,7 @@
         <graphicData>
             <texPath>Chems/Stimpaks/Stimpak/FCP_Stimpak</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -119,7 +121,7 @@
 
     <!-- Ultra Stimpak -->
 
-    <ThingDef ParentName="FCP_Makeable_Drug_Base">
+    <ThingDef ParentName="FCP_Makeable_Medicine_Base">
         <defName>FCP_Chem_Ultra_Stimpak</defName>
         <label>ultra stimpak</label>
         <description>An enhanced stimulation pack with improved healing properties and faster action. These improved stimpaks use a more concentrated formula with additional bio-regenerative compounds.</description>
@@ -129,6 +131,7 @@
         <graphicData>
             <texPath>Chems/Stimpaks/Ultra_Stimpak/FCP_Ultra_Stimpak</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -176,7 +179,7 @@
 
     <!-- Super Stimpak -->
 
-    <ThingDef ParentName="FCP_Makeable_Drug_Base">
+    <ThingDef ParentName="FCP_Makeable_Medicine_Base">
         <defName>FCP_Chem_Super_Stimpak</defName>
         <label>super stimpak</label>
         <description>A potent military-grade stimulation pack that provides rapid and extensive healing. Super stimpaks use a highly concentrated formula with advanced bio-regenerative compounds, making them extremely valuable and rare.</description>
@@ -186,6 +189,7 @@
         <graphicData>
             <texPath>Chems/Stimpaks/Super_Stimpak/FCP_Super_Stimpak</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -233,7 +237,7 @@
 
     <!-- Auto-Stimpak -->
 
-    <ThingDef ParentName="FCP_Makeable_Drug_Base">
+    <ThingDef ParentName="FCP_Makeable_Medicine_Base">
         <defName>FCP_Chem_Auto_Stimpak</defName>
         <label>auto-stimpak</label>
         <description>An automated delivery system that dispenses a standard stimpak dose when injuries are detected. The auto-injector mechanism eliminates the need for manual application, making it ideal for solo travelers.</description>
@@ -243,6 +247,7 @@
         <graphicData>
             <texPath>Chems/Stimpaks/Auto_Stimpak/FCP_Auto_Stimpak</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -290,7 +295,7 @@
 
     <!-- Auto-Super Stimpak -->
 
-    <ThingDef ParentName="FCP_Makeable_Drug_Base">
+    <ThingDef ParentName="FCP_Makeable_Medicine_Base">
         <defName>FCP_Chem_Auto_Super_Stimpak</defName>
         <label>auto-super stimpak</label>
         <description>An automated delivery system loaded with super stimpak formula for rapid emergency healing. This advanced injector combines military-grade healing compounds with automated delivery technology, making it one of the most valuable medical items in the wasteland.</description>
@@ -300,6 +305,7 @@
         <graphicData>
             <texPath>Chems/Stimpaks/Auto_Super_Stimpak/FCP_Auto_Super_Stimpak</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -349,7 +355,7 @@
 
     <!-- Rad-X Drug -->
 
-    <ThingDef ParentName="FCP_Makeable_Drug_Base">
+    <ThingDef ParentName="FCP_Makeable_Medicine_Base">
         <defName>FCP_Chem_RadX</defName>
         <label>Rad-X</label>
         <description>A pre-war anti-radiation chemical that significantly increases the body's resistance to toxic and radioactive contamination. Rad-X works by temporarily altering cellular structure to resist radiation absorption, though this process causes minor disorientation and reduced reflexes.\n\nUnlike Rad-Away, which removes existing contamination, Rad-X is taken preventatively before exposure to hazardous environments.</description>
@@ -359,6 +365,7 @@
         <graphicData>
             <texPath>Chems/Rad_X/FCP_Rad_X</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -408,7 +415,7 @@
 
     <!-- Rad-Away Drug -->
 
-    <ThingDef ParentName="FCP_Makeable_Drug_Base">
+    <ThingDef ParentName="FCP_Makeable_Medicine_Base">
         <defName>FCP_Chem_Radaway</defName>
         <label>Rad-Away</label>
         <description>A pre-war intravenous chemical solution that bonds with radiation contamination in the body and flushes it out through the bloodstream. While effective at treating toxic buildup, the process is exhausting and leaves the patient weakened for several hours.\n\nRad-Away is a valuable commodity in the wasteland, where radiation exposure is a constant threat.</description>
@@ -418,6 +425,7 @@
         <graphicData>
             <texPath>Chems/Radaway/FCP_Radaway</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -467,7 +475,7 @@
 
     <!-- Healing Powder Drug -->
 
-    <ThingDef ParentName="FCP_Makeable_Drug_Base" MayRequire="Rick.FCP.Plants">
+    <ThingDef ParentName="FCP_Makeable_Medicine_Base" MayRequire="Rick.FCP.Plants">
         <defName>FCP_Chem_Healing_Powder</defName>
         <label>healing powder</label>
         <description>A traditional wasteland medicine made from ground broc flower and xander root. While less effective than modern stimpaks, healing powder is cheaper to produce and has been used by tribal healers for generations. The mixture provides gradual healing over time.</description>
@@ -477,6 +485,7 @@
         <graphicData>
             <texPath>Chems/Healing_Powder/FCP_Healing_Powder</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -530,7 +539,7 @@
 
     <!-- Med-X Drug -->
 
-    <ThingDef ParentName="FCP_Makeable_Drug_Base">
+    <ThingDef ParentName="FCP_Makeable_Medicine_Base">
         <defName>FCP_Chem_MedX</defName>
         <label>Med-X</label>
         <description>A pre-war pain suppression medication. Med-X works by blocking pain receptors and reducing incoming damage through enhanced pain tolerance. The drug is highly effective but carries significant risk of addiction.\n\nOriginally marketed as a general anesthetic, Med-X has become a valuable combat drug in the wasteland.</description>
@@ -540,6 +549,7 @@
         <graphicData>
             <texPath>Chems/Med_X/FCP_Med_X</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -599,6 +609,7 @@
         <graphicData>
             <texPath>Chems/Hydra/FCP_Hydra</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -610,7 +621,7 @@
             <foodType>Processed</foodType>
             <baseIngestTicks>60</baseIngestTicks>
             <nurseable>true</nurseable>
-            <drugCategory>Medical</drugCategory>
+            <drugCategory>Hard</drugCategory>
             <ingestSound>Ingest_Inject</ingestSound>
             <ingestHoldOffsetStanding>
                 <northDefault>
@@ -648,7 +659,7 @@
 
     <!-- Doctor's Bag -->
 
-    <ThingDef ParentName="FCP_Makeable_Drug_Base">
+    <ThingDef ParentName="FCP_Makeable_Medicine_Base">
         <defName>FCP_Chem_Doctors_Bag</defName>
         <label>doctor's bag</label>
         <description>A comprehensive medical kit containing surgical tools, antiseptics, splints, and pharmaceutical supplies. Doctor's bags allow field treatment of serious injuries and crippled limbs, though proper application requires medical knowledge and time.\n\nAn essential piece of equipment for any serious wasteland medic.</description>
@@ -658,6 +669,7 @@
         <graphicData>
             <texPath>Chems/Doctors_Bag/FCP_Doctors_Bag</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -708,7 +720,7 @@
 
     <!-- Blood Pack -->
 
-    <ThingDef ParentName="DrugBase">
+    <ThingDef ParentName="FCP_Makeable_Medicine_Base">
         <defName>FCP_Chem_Blood_Pack</defName>
         <label>blood pack</label>
         <description>A sterile bag of preserved blood suitable for emergency transfusions. Blood packs provide immediate restoration of blood volume and help stabilize critically wounded patients. While not as advanced as modern medical technology, these pre-war medical supplies remain valuable in the wasteland.\n\nBlood packs are universal donors and work with all blood types.</description>
@@ -718,6 +730,7 @@
         <graphicData>
             <texPath>Chems/Bloodbag/FCP_Bloodbag</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -745,6 +758,13 @@
                 </li>
             </outcomeDoers>
         </ingestible>
+        <recipeMaker>
+            <researchPrerequisite>FCP_Research_Medicinal_Drugs</researchPrerequisite>
+        </recipeMaker>
+        <costList>
+            <Neutroamine>2</Neutroamine>
+            <MedicineHerbal>1</MedicineHerbal>
+        </costList>
         <comps>
             <li Class="FCP.Core.CompProperties_LabelColored">
                 <rarity>Common</rarity>
@@ -769,6 +789,7 @@
         <graphicData>
             <texPath>Chems/Inhalers/Jet/FCP_Jet</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -831,6 +852,7 @@
         <graphicData>
             <texPath>Chems/Psychos/Psycho/FCP_Psycho</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -893,6 +915,7 @@
         <graphicData>
             <texPath>Chems/Buffout/FCP_Buffout</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -954,6 +977,7 @@
         <graphicData>
             <texPath>Chems/Mentats/Mentats/FCP_Mentats</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -1016,6 +1040,7 @@
         <graphicData>
             <texPath>Chems/Turbo/FCP_Turbo</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -1077,6 +1102,7 @@
         <graphicData>
             <texPath>Chems/Psychos/Slasher/FCP_Slasher</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -1139,6 +1165,7 @@
         <graphicData>
             <texPath>Chems/Steady/FCP_Steady</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -1198,6 +1225,7 @@
         <graphicData>
             <texPath>Chems/Cateye/FCP_Cateye</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -1247,7 +1275,7 @@
 
     <!-- Addictol Drug -->
 
-    <ThingDef ParentName="FCP_Makeable_Drug_Base" MayRequire="Rick.FCP.Plants">
+    <ThingDef ParentName="FCP_Makeable_Medicine_Base" MayRequire="Rick.FCP.Plants">
         <defName>FCP_Chem_Addictol</defName>
         <label>Addictol</label>
         <description>A powerful anti-addiction medication that purges the body of chemical dependencies. Addictol works by resetting neurological pathways and breaking the addiction cycle, though the process is uncomfortable and temporary exhaustion is common.\n\nA lifesaver for those trying to kick dangerous habits, though its high cost limits availability.</description>
@@ -1257,6 +1285,7 @@
         <graphicData>
             <texPath>Chems/Inhalers/Addictol/FCP_Addictol</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -1306,7 +1335,7 @@
 
     <!-- Fixer Drug -->
 
-    <ThingDef ParentName="FCP_Makeable_Drug_Base" MayRequire="Rick.FCP.Plants">
+    <ThingDef ParentName="FCP_Makeable_Medicine_Base" MayRequire="Rick.FCP.Plants">
         <defName>FCP_Chem_Fixer</defName>
         <label>Fixer</label>
         <description>A specialized anti-addiction compound that helps break chemical dependencies. While less powerful than Addictol, Fixer is more readily available and still effective at combating withdrawal symptoms and reducing addiction severity.\n\nA wasteland doctor's tool for helping addicts recover without access to expensive pre-war medications.</description>
@@ -1316,6 +1345,7 @@
         <graphicData>
             <texPath>Chems/Mentats/Fixer/FCP_Fixer</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -1376,6 +1406,7 @@
         <graphicData>
             <texPath>Chems/Inhalers/Ultra_Jet/FCP_Ultra_Jet</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -1439,6 +1470,7 @@
         <graphicData>
             <texPath>Chems/Inhalers/Rocket/FCP_Rocket</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -1501,6 +1533,7 @@
         <graphicData>
             <texPath>Chems/Mentats/Berry_Mentats/FCP_Berry_Mentats</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -1563,6 +1596,7 @@
         <graphicData>
             <texPath>Chems/Mentats/Grape_Mentats/FCP_Grape_Mentats</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -1625,6 +1659,7 @@
         <graphicData>
             <texPath>Chems/Mentats/Orange_Mentats/FCP_Orange_Mentats</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -1687,6 +1722,7 @@
         <graphicData>
             <texPath>Chems/Mentats/Party_Time_Mentats/FCP_Party_Time_Mentats</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -1749,6 +1785,7 @@
         <graphicData>
             <texPath>Chems/Daytripper/FCP_Daytripper</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -1810,6 +1847,7 @@
         <graphicData>
             <texPath>Chems/X_Cell/FCP_X_Cell</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -1870,6 +1908,7 @@
         <graphicData>
             <texPath>Chems/Daddy_O/FCP_Daddy_O</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -1932,6 +1971,7 @@
         <graphicData>
             <texPath>Chems/Rad_X/FCP_Rad_X</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
@@ -1992,6 +2032,7 @@
         <graphicData>
             <texPath>Chems/Inhalers/Dixons_Jet/FCP_Dixons_Jet</texPath>
             <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.65, 0.65)</drawSize>
         </graphicData>
         <rotatable>false</rotatable>
         <statBases>
