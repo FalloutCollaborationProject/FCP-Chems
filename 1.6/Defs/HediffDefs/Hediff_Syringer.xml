@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!--__________ Syringer Payloads __________-->
+
+    <!-- Sleep Syringe -->
+
+    <HediffDef>
+        <defName>FCP_Hediff_Syringe_Sleep</defName>
+        <hediffClass>HediffWithComps</hediffClass>
+        <defaultLabelColor>(0.6, 0.7, 1.0)</defaultLabelColor>
+        <label>sedative</label>
+        <labelNoun>a sedative</labelNoun>
+        <description>A fast-acting sedative compound injected via syringer dart. Takes a few seconds to reach full effect, then keeps the victim unconscious for a few hours.</description>
+        <isBad>false</isBad>
+        <initialSeverity>0.001</initialSeverity>
+        <maxSeverity>1</maxSeverity>
+        <comps>
+            <li Class="HediffCompProperties_SeverityPerDay">
+                <severityPerDay>200</severityPerDay>
+            </li>
+            <li Class="HediffCompProperties_Disappears">
+                <disappearsAfterTicks>5000~15000</disappearsAfterTicks>
+                <showRemainingTime>true</showRemainingTime>
+            </li>
+        </comps>
+        <stages>
+            <li>
+                <label>taking effect</label>
+                <capMods>
+                    <li>
+                        <capacity>Moving</capacity>
+                        <offset>-0.2</offset>
+                    </li>
+                    <li>
+                        <capacity>Manipulation</capacity>
+                        <offset>-0.2</offset>
+                    </li>
+                </capMods>
+            </li>
+            <li>
+                <minSeverity>0.8</minSeverity>
+                <label>asleep</label>
+                <painFactor>0</painFactor>
+                <capMods>
+                    <li>
+                        <capacity>Consciousness</capacity>
+                        <setMax>0.01</setMax>
+                    </li>
+                </capMods>
+            </li>
+        </stages>
+    </HediffDef>
+
+</Defs>

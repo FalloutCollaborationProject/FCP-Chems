@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!--__________ Syringer __________-->
+
+    <ThingDef ParentName="FCP_Complex_Gun_Base">
+        <defName>FCP_Gun_Syringer</defName>
+        <label>syringer</label>
+        <description>A homemade rifle rebuilt to fire syringes instead of bullets. Whatever's loaded determines what happens to whoever it hits, from a dose that puts them to sleep to something far less pleasant. Doesn't do much damage on its own; the needle is just the delivery system.</description>
+        <smeltable>false</smeltable>
+        <graphicData>
+            <texPath>Things/Item/Equipment/WeaponRanged/BoltActionRifle</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+        </graphicData>
+        <soundInteract>Interact_Rifle</soundInteract>
+        <recipeMaker>
+            <researchPrerequisites>
+                <li>FCP_Research_Advanced_Gunsmithing</li>
+            </researchPrerequisites>
+            <skillRequirements>
+                <Crafting>6</Crafting>
+            </skillRequirements>
+            <recipeUsers>
+                <li>FCP_Production_Complex_Weapons_Workbench</li>
+                <li>TableMachining</li>
+            </recipeUsers>
+        </recipeMaker>
+        <thingSetMakerTags>
+            <li>RewardStandardQualitySuper</li>
+        </thingSetMakerTags>
+        <statBases>
+            <MarketValue>650</MarketValue>
+            <WorkToMake>50000</WorkToMake>
+            <Mass>3.2</Mass>
+            <AccuracyTouch>0.75</AccuracyTouch>
+            <AccuracyShort>0.80</AccuracyShort>
+            <AccuracyMedium>0.70</AccuracyMedium>
+            <AccuracyLong>0.55</AccuracyLong>
+            <RangedWeapon_Cooldown>2.2</RangedWeapon_Cooldown>
+        </statBases>
+        <costList>
+            <Steel>40</Steel>
+            <ComponentIndustrial>3</ComponentIndustrial>
+        </costList>
+        <weaponTags>
+            <li>FCP_Syringer</li>
+        </weaponTags>
+        <verbs>
+            <li>
+                <verbClass>FCP.Core.Verb_Shoot_Syringer</verbClass>
+                <hasStandardCommand>true</hasStandardCommand>
+                <defaultProjectile>FCP_Proj_Syringe_Sleep</defaultProjectile>
+                <warmupTime>1.0</warmupTime>
+                <range>18</range>
+                <burstShotCount>1</burstShotCount>
+                <soundCast>Shot_BoltActionRifle</soundCast>
+                <soundCastTail>GunTail_Heavy</soundCastTail>
+                <muzzleFlashScale>6</muzzleFlashScale>
+            </li>
+        </verbs>
+        <tools>
+            <li>
+                <label>stock</label>
+                <capacities>
+                    <li>Blunt</li>
+                </capacities>
+                <power>8</power>
+                <cooldownTime>1.9</cooldownTime>
+            </li>
+        </tools>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Rare</rarity>
+            </li>
+            <li Class="FCP.Core.CompProperties_SyringerAmmo" />
+        </comps>
+    </ThingDef>
+
+</Defs>

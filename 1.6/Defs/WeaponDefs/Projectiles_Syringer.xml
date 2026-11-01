@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!--__________ Syringer Darts __________-->
+
+    <ThingDef Name="FCP_BaseSyringeDart" ParentName="BaseBullet" Abstract="True">
+        <thingClass>FCP.Core.Projectile_Syringe</thingClass>
+        <graphicData>
+            <texPath>Things/Projectile/Bullet_Small</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <shaderType>TransparentPostLight</shaderType>
+        </graphicData>
+        <projectile>
+            <speed>50</speed>
+            <damageDef>Stab</damageDef>
+            <damageAmountBase>1</damageAmountBase>
+            <armorPenetrationBase>0.15</armorPenetrationBase>
+            <stoppingPower>0.5</stoppingPower>
+        </projectile>
+    </ThingDef>
+
+    <!-- Sleep Dart -->
+
+    <ThingDef ParentName="FCP_BaseSyringeDart">
+        <defName>FCP_Proj_Syringe_Sleep</defName>
+        <label>sleep dart</label>
+        <modExtensions>
+            <li Class="FCP.Core.DefExtension_SyringePayload">
+                <hediff>FCP_Hediff_Syringe_Sleep</hediff>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Berserk Dart -->
+
+    <ThingDef ParentName="FCP_BaseSyringeDart">
+        <defName>FCP_Proj_Syringe_Berserk</defName>
+        <label>berserk dart</label>
+        <modExtensions>
+            <li Class="FCP.Core.DefExtension_SyringePayload">
+                <mentalState>Berserk</mentalState>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+</Defs>

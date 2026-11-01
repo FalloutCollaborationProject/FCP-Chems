@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<LanguageData>
+
+    <!--__________ Syringer __________-->
+
+    <FCP_Syringer_Load>Load syringe</FCP_Syringer_Load>
+    <FCP_Syringer_Reload>Loaded: {0}</FCP_Syringer_Reload>
+    <FCP_Syringer_Load_Desc>Load a syringe from your inventory into the syringer's chamber. Firing consumes the loaded syringe.</FCP_Syringer_Load_Desc>
+    <FCP_Syringer_NoSyringes>No syringes carried</FCP_Syringer_NoSyringes>
+
+</LanguageData>

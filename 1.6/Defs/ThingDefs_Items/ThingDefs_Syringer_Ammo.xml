@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+    <!--__________ Syringer Ammo __________-->
+
+    <ThingDef Name="FCP_Syringe_Base" ParentName="ResourceBase" Abstract="True">
+        <tickerType>Never</tickerType>
+        <techLevel>Industrial</techLevel>
+        <stackLimit>10</stackLimit>
+        <statBases>
+            <MaxHitPoints>30</MaxHitPoints>
+            <MarketValue>25</MarketValue>
+            <Mass>0.05</Mass>
+            <Flammability>0.5</Flammability>
+        </statBases>
+        <thingCategories>
+            <li>Manufactured</li>
+        </thingCategories>
+        <recipeMaker>
+            <workSpeedStat>DrugSynthesisSpeed</workSpeedStat>
+            <workSkill>Intellectual</workSkill>
+            <effectWorking>Cook</effectWorking>
+            <soundWorking>Recipe_Drug</soundWorking>
+            <recipeUsers>
+                <li>FCP_Production_Chemistry_Workbench</li>
+            </recipeUsers>
+            <skillRequirements>
+                <Intellectual>4</Intellectual>
+            </skillRequirements>
+            <researchPrerequisite>FCP_Research_Stimpak_Production</researchPrerequisite>
+        </recipeMaker>
+        <comps>
+            <li Class="FCP.Core.CompProperties_LabelColored">
+                <rarity>Rare</rarity>
+            </li>
+        </comps>
+    </ThingDef>
+
+    <!-- Sleep Syringe -->
+
+    <ThingDef ParentName="FCP_Syringe_Base">
+        <defName>FCP_Syringe_Sleep</defName>
+        <label>sleep syringe</label>
+        <description>A syringer round loaded with a fast-acting sedative. Takes a few seconds to knock its target unconscious, then keeps them asleep for a few hours. Does almost no physical harm on its own.</description>
+        <descriptionHyperlinks>
+            <HediffDef>FCP_Hediff_Syringe_Sleep</HediffDef>
+        </descriptionHyperlinks>
+        <graphicData>
+            <texPath>Chems/Stimpaks/Stimpak/FCP_Stimpak</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.5, 0.5)</drawSize>
+        </graphicData>
+        <costList>
+            <MedicineHerbal>1</MedicineHerbal>
+            <Neutroamine>2</Neutroamine>
+        </costList>
+        <modExtensions>
+            <li Class="FCP.Core.DefExtension_SyringeAmmo">
+                <projectile>FCP_Proj_Syringe_Sleep</projectile>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+    <!-- Berserk Syringe -->
+
+    <ThingDef ParentName="FCP_Syringe_Base">
+        <defName>FCP_Syringe_Berserk</defName>
+        <label>berserk syringe</label>
+        <description>A syringer round loaded with a volatile psychoactive compound. Sends its target into a violent, indiscriminate rage, turning them against anyone nearby, friend or foe.</description>
+        <graphicData>
+            <texPath>Chems/Stimpaks/Stimpak/FCP_Stimpak</texPath>
+            <graphicClass>Graphic_Single</graphicClass>
+            <drawSize>(0.5, 0.5)</drawSize>
+            <color>(0.8, 0.2, 0.2)</color>
+        </graphicData>
+        <costList>
+            <MedicineHerbal>1</MedicineHerbal>
+            <Neutroamine>3</Neutroamine>
+        </costList>
+        <modExtensions>
+            <li Class="FCP.Core.DefExtension_SyringeAmmo">
+                <projectile>FCP_Proj_Syringe_Berserk</projectile>
+            </li>
+        </modExtensions>
+    </ThingDef>
+
+</Defs>

@@ -1,0 +1,12 @@
+<Patch>
+
+    <!-- Blood Extraction Surgery -->
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Human"]/recipes</xpath>
+        <value>
+            <li>FCP_Extract_Blood</li>
+        </value>
+    </Operation>
+
+</Patch>

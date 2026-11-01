@@ -589,6 +589,8 @@
                 <rarity>Common</rarity>
             </li>
             <li Class="CompProperties_Drug">
+                <chemical>FCP_MedX</chemical>
+                <addictiveness>0.13</addictiveness>
                 <listOrder>1030</listOrder>
                 <overdoseSeverityOffset>0.08~0.14</overdoseSeverityOffset>
             </li>
